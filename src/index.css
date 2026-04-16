@@ -1,105 +1,203 @@
+@import "@fontsource/special-elite/index.css";
+@import "@fontsource/jetbrains-mono/400.css";
+@import "@fontsource/jetbrains-mono/700.css";
+@import "@fontsource/oswald/500.css";
+@import "@fontsource/oswald/700.css";
+@import "@fontsource/archivo-black/index.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* BLNDR — Classified Dossier Design System
+   All colors HSL. Warm paper background, blackout ink, rust hazard accent.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Paper */
+    --background: 40 28% 86%;
+    --paper: 40 30% 90%;
+    --paper-deep: 38 22% 78%;
+    --paper-shadow: 30 15% 35%;
+    --foreground: 30 12% 12%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Ink */
+    --ink: 30 12% 10%;
+    --ink-soft: 30 10% 25%;
+    --ink-mute: 30 8% 45%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Hazard / accent */
+    --hazard: 14 78% 42%;
+    --hazard-foreground: 40 30% 95%;
+    --hazard-deep: 12 70% 32%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Tape */
+    --tape: 42 60% 72%;
+    --tape-warm: 28 55% 70%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    /* Mapped to shadcn tokens */
+    --card: 40 35% 93%;
+    --card-foreground: var(--ink);
+    --popover: 40 35% 93%;
+    --popover-foreground: var(--ink);
+    --primary: var(--ink);
+    --primary-foreground: 40 30% 95%;
+    --secondary: 40 25% 80%;
+    --secondary-foreground: var(--ink);
+    --muted: 40 22% 82%;
+    --muted-foreground: var(--ink-mute);
+    --accent: var(--hazard);
+    --accent-foreground: var(--hazard-foreground);
+    --destructive: 0 70% 40%;
+    --destructive-foreground: 40 30% 95%;
+    --border: 30 15% 55%;
+    --input: 30 15% 55%;
+    --ring: var(--hazard);
+    --radius: 0.125rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 40 28% 86%;
+    --foreground: 30 12% 12%;
   }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-
+  * { @apply border-border; }
   body {
     @apply bg-background text-foreground;
+    font-family: 'JetBrains Mono', monospace;
+    background-image:
+      radial-gradient(at 20% 10%, hsl(40 30% 90% / 0.7) 0%, transparent 50%),
+      radial-gradient(at 80% 80%, hsl(30 25% 75% / 0.5) 0%, transparent 50%),
+      url("/src/assets/paper-texture.jpg");
+    background-size: cover, cover, 800px;
+    background-attachment: fixed;
+  }
+  ::selection { background: hsl(var(--hazard)); color: hsl(var(--hazard-foreground)); }
+}
+
+@layer components {
+  /* Stamped "MONO" labels */
+  .label-mono {
+    font-family: 'JetBrains Mono', monospace;
+    @apply text-xs uppercase tracking-[0.2em] font-bold;
+  }
+  .label-tag {
+    font-family: 'Special Elite', monospace;
+    @apply text-xs uppercase tracking-widest;
+  }
+  /* Display heading */
+  .display {
+    font-family: 'Archivo Black', 'Oswald', sans-serif;
+    @apply uppercase leading-[0.9] tracking-tight;
+    text-shadow: 1px 1px 0 hsl(var(--paper-deep));
+  }
+  .display-condensed {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    @apply uppercase leading-[0.95] tracking-tight;
+  }
+  .typewriter {
+    font-family: 'Special Elite', 'JetBrains Mono', monospace;
+  }
+
+  /* Paper card with deckled / scanned-document feel */
+  .paper-card {
+    background: hsl(var(--paper));
+    background-image:
+      linear-gradient(180deg, hsl(40 35% 94%), hsl(40 30% 90%));
+    border: 1px solid hsl(30 20% 70%);
+    box-shadow:
+      0 1px 0 hsl(40 35% 96%) inset,
+      0 12px 24px -12px hsl(var(--paper-shadow) / 0.45),
+      0 30px 50px -25px hsl(var(--paper-shadow) / 0.35);
+    position: relative;
+  }
+  .paper-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at top left, transparent 70%, hsl(30 20% 60% / 0.08)),
+      radial-gradient(ellipse at bottom right, transparent 65%, hsl(30 20% 50% / 0.12));
+    pointer-events: none;
+    mix-blend-mode: multiply;
+  }
+
+  /* Blackout ink rectangle (redaction) */
+  .redact {
+    background: hsl(var(--ink));
+    color: hsl(var(--paper));
+    padding: 0.15em 0.5em;
+    display: inline-block;
+    box-shadow: 2px 2px 0 hsl(var(--ink) / 0.2);
+  }
+  .redact-hazard {
+    background: hsl(var(--hazard));
+    color: hsl(var(--hazard-foreground));
+    padding: 0.2em 0.6em;
+    display: inline-block;
+  }
+
+  /* Tape strip */
+  .tape {
+    position: absolute;
+    width: 110px;
+    height: 26px;
+    background: hsl(var(--tape) / 0.85);
+    box-shadow: 0 4px 8px -3px hsl(var(--paper-shadow) / 0.4);
+    background-image: linear-gradient(90deg,
+      hsl(var(--tape) / 0.6) 0%,
+      hsl(var(--tape) / 0.9) 50%,
+      hsl(var(--tape) / 0.6) 100%);
+  }
+  .tape::before, .tape::after {
+    content: ''; position: absolute; top: 0; bottom: 0; width: 6px;
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 2px, hsl(var(--tape-warm)/0.3) 2px, hsl(var(--tape-warm)/0.3) 4px);
+  }
+  .tape::before { left: -3px; }
+  .tape::after { right: -3px; }
+
+  /* Scribbled annotation */
+  .scribble {
+    font-family: 'Special Elite', cursive;
+    color: hsl(var(--ink-soft));
+    @apply italic;
+  }
+
+  /* Section divider — perforated */
+  .perf-divide {
+    border-top: 1px dashed hsl(var(--ink) / 0.4);
+  }
+
+  /* Hover lift for cards */
+  .lift {
+    transition: transform 350ms cubic-bezier(.2,.8,.2,1), box-shadow 350ms;
+  }
+  .lift:hover {
+    transform: translateY(-4px) rotate(-0.3deg);
+    box-shadow:
+      0 1px 0 hsl(40 35% 96%) inset,
+      0 20px 40px -15px hsl(var(--paper-shadow) / 0.5);
+  }
+
+  /* Marquee */
+  .marquee-track {
+    animation: marquee 40s linear infinite;
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
   }
 }
