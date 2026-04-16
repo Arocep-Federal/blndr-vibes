@@ -13,12 +13,36 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        display: ['"Archivo Black"', '"Oswald"', 'sans-serif'],
+        condensed: ['"Oswald"', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
+        type: ['"Special Elite"', 'monospace'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        paper: {
+          DEFAULT: "hsl(var(--paper))",
+          deep: "hsl(var(--paper-deep))",
+        },
+        ink: {
+          DEFAULT: "hsl(var(--ink))",
+          soft: "hsl(var(--ink-soft))",
+          mute: "hsl(var(--ink-mute))",
+        },
+        hazard: {
+          DEFAULT: "hsl(var(--hazard))",
+          deep: "hsl(var(--hazard-deep))",
+          foreground: "hsl(var(--hazard-foreground))",
+        },
+        tape: {
+          DEFAULT: "hsl(var(--tape))",
+          warm: "hsl(var(--tape-warm))",
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
