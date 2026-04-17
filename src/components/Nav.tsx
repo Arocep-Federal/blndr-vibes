@@ -25,10 +25,10 @@ export const Nav = () => {
               </a>
             ))}
             <a
-              href="#cta"
+              href="/app"
               className="label-mono bg-ink text-paper px-4 py-2 hover:bg-hazard transition-colors"
             >
-              Get Access →
+              Enter HQ →
             </a>
           </nav>
           <button
@@ -46,8 +46,8 @@ export const Nav = () => {
                 {l.label}
               </a>
             ))}
-            <a href="#cta" className="label-mono bg-ink text-paper px-4 py-2 inline-block w-fit">
-              Get Access →
+            <a href="/app" className="label-mono bg-ink text-paper px-4 py-2 inline-block w-fit">
+              Enter HQ →
             </a>
           </div>
         </div>
