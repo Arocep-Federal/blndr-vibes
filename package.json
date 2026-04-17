@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@fontsource/archivo-black": "^5.2.8",
+    "@fontsource/ibm-plex-mono": "^5.2.7",
     "@fontsource/jetbrains-mono": "^5.2.8",
     "@fontsource/oswald": "^5.2.8",
     "@fontsource/special-elite": "^5.2.8",
