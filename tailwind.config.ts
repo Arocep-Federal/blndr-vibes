@@ -17,7 +17,7 @@ export default {
         display: ['"Archivo Black"', '"Oswald"', 'sans-serif'],
         condensed: ['"Oswald"', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
-        type: ['"Special Elite"', 'monospace'],
+        type: ['"IBM Plex Mono"', 'monospace'],
       },
       colors: {
         border: "hsl(var(--border))",
