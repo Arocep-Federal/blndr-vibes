@@ -2,7 +2,6 @@ import { ReactNode, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import {
-  LayoutDashboard,
   FlaskConical,
   Library,
   Droplet,
@@ -17,14 +16,13 @@ import {
 import { ChandlerDock } from "./ChandlerDock";
 
 const navItems = [
-  { to: "/app", label: "Dashboard", icon: LayoutDashboard, code: "01" },
-  { to: "/app/mixer", label: "Mixer", icon: FlaskConical, code: "02" },
-  { to: "/app/library", label: "Library", icon: Library, code: "03" },
-  { to: "/app/blends", label: "Blends", icon: Droplet, code: "04" },
-  { to: "/app/batch", label: "Batch Planner", icon: Beaker, code: "05" },
-  { to: "/app/inventory", label: "Inventory", icon: Boxes, code: "06" },
-  { to: "/app/settings", label: "Settings", icon: SettingsIcon, code: "07" },
-  { to: "/app/docs", label: "Field Manual", icon: BookOpen, code: "08" },
+  { to: "/app/mixer", label: "Mixer", icon: FlaskConical, code: "01" },
+  { to: "/app/library", label: "Library", icon: Library, code: "02" },
+  { to: "/app/blends", label: "Blends", icon: Droplet, code: "03" },
+  { to: "/app/batch", label: "Batch Planner", icon: Beaker, code: "04" },
+  { to: "/app/inventory", label: "Inventory", icon: Boxes, code: "05" },
+  { to: "/app/settings", label: "Settings", icon: SettingsIcon, code: "06" },
+  { to: "/app/docs", label: "Field Manual", icon: BookOpen, code: "07" },
 ];
 
 interface AppShellProps {
