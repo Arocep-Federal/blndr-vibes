@@ -13,8 +13,8 @@ import {
   LogOut,
   Bell,
   ChevronsLeft,
-  Sparkles,
 } from "lucide-react";
+import { ChandlerDock } from "./ChandlerDock";
 
 const navItems = [
   { to: "/app", label: "Dashboard", icon: LayoutDashboard, code: "01" },
@@ -175,10 +175,8 @@ export const AppShell = ({ children, title, subtitle, fileId, actions }: AppShel
 
         <div className="p-6 md:p-8 max-w-[1600px]">{children}</div>
 
-        {/* Floating agent button */}
-        <button className="fixed bottom-6 right-6 w-14 h-14 bg-hazard text-hazard-foreground border-2 border-ink shadow-[4px_4px_0_hsl(var(--ink))] flex items-center justify-center hover:translate-y-[-2px] transition-transform z-40">
-          <Sparkles className="w-6 h-6" />
-        </button>
+        {/* Persistent CHANDLER-7 dock */}
+        <ChandlerDock />
       </main>
     </div>
   );
