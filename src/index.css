@@ -94,7 +94,12 @@
   /* Stamped "MONO" labels */
   .label-mono {
     font-family: 'JetBrains Mono', monospace;
-    @apply text-xs uppercase tracking-[0.2em] font-bold;
+    @apply text-[11px] uppercase tracking-[0.18em] font-bold;
+  }
+  /* Smaller variant — use sparingly, only for non-interactive meta */
+  .label-mono-xs {
+    font-family: 'JetBrains Mono', monospace;
+    @apply text-[10px] uppercase tracking-[0.16em] font-bold;
   }
   .label-tag {
     font-family: 'IBM Plex Mono', monospace;
