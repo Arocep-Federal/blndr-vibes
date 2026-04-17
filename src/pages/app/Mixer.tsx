@@ -10,19 +10,17 @@ const Mixer = () => {
       subtitle="Blend oils into custom scent profiles. Or let Chandler do the heavy lifting."
       fileId="MIX-002"
       actions={
-        <button className="label-mono text-[10px] bg-ink text-paper px-3 py-2 flex items-center gap-1.5 border-2 border-ink hover:bg-hazard">
-          <Plus className="w-3.5 h-3.5" /> ADD FRAGRANCE
+        <button className="label-mono bg-hazard text-hazard-foreground border-2 border-ink px-4 btn-min flex items-center gap-2 shadow-[3px_3px_0_hsl(var(--ink))] hover:translate-y-[-1px] transition-transform">
+          <Plus className="w-3.5 h-3.5" /> START FORMULA
         </button>
       }
     >
-      <DossierCard className="p-10 md:p-16 relative" hover={false}>
-        <div className="tape" style={{ top: -12, left: "10%", transform: "rotate(-4deg)" }} />
-        <div className="tape" style={{ top: -12, right: "10%", left: "auto", transform: "rotate(3deg)" }} />
+      <DossierCard className="p-8 md:p-12 relative" hover={false} tape rotate={-0.4} tilt>
         <div className="absolute top-4 right-4">
           <StampBadge variant="ink" rotate={6}>BENCH ACTIVE</StampBadge>
         </div>
 
-        <div className="border-2 border-dashed border-ink/40 p-12 md:p-16 text-center max-w-3xl mx-auto">
+        <div className="border-2 border-dashed border-ink/40 p-10 md:p-14 text-center max-w-3xl mx-auto">
           <div className="flex justify-center gap-4 mb-6">
             <div className="w-16 h-24 border-2 border-ink relative bg-paper-deep/40">
               <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-hazard/50" />
@@ -38,7 +36,7 @@ const Mixer = () => {
             </div>
           </div>
 
-          <div className="label-mono text-[10px] text-hazard mb-2">▼ NO ACTIVE FORMULA</div>
+          <div className="label-mono text-hazard mb-2">▼ NO ACTIVE FORMULA</div>
           <h2 className="font-display text-4xl md:text-5xl mb-3">
             START YOUR <span className="redact-hazard">BLEND</span>
           </h2>
@@ -48,10 +46,10 @@ const Mixer = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <button className="label-mono text-[11px] border-2 border-ink px-5 py-3 hover:bg-ink hover:text-paper transition-colors">
+            <button className="label-mono border-2 border-ink/60 px-5 btn-min hover:border-ink hover:bg-paper-deep transition-colors">
               ▸ BROWSE FRAGRANCES
             </button>
-            <button className="label-mono text-[11px] bg-hazard text-hazard-foreground border-2 border-ink px-5 py-3 shadow-[3px_3px_0_hsl(var(--ink))] flex items-center justify-center gap-2 hover:translate-y-[-2px] transition-transform">
+            <button className="label-mono bg-hazard text-hazard-foreground border-2 border-ink px-5 btn-min shadow-[3px_3px_0_hsl(var(--ink))] flex items-center justify-center gap-2 hover:translate-y-[-2px] transition-transform">
               <Sparkles className="w-4 h-4" /> DESCRIBE A SCENT
             </button>
           </div>
@@ -60,15 +58,15 @@ const Mixer = () => {
         {/* Agent prompt strip */}
         <div className="mt-8 bg-ink text-paper p-4 flex items-center gap-3 border-2 border-ink">
           <Sparkles className="w-5 h-5 text-hazard shrink-0" />
-          <div className="flex-1 typewriter text-sm">
-            <span className="label-mono text-[9px] text-hazard">CHANDLER &gt; </span>
+          <div className="flex-1 typewriter text-[13px]">
+            <span className="label-mono text-hazard mr-1">CHANDLER &gt;</span>
             "Try: <span className="underline decoration-hazard">a cozy fall blend with apple and bourbon, under $0.40/oz</span>"
           </div>
-          <button className="text-paper/60 hover:text-hazard">
+          <button aria-label="Voice" className="text-paper/60 hover:text-hazard w-8 h-8 flex items-center justify-center">
             <Mic className="w-4 h-4" />
           </button>
-          <button className="bg-hazard text-hazard-foreground px-3 py-1.5 label-mono text-[10px] flex items-center gap-1.5">
-            <Send className="w-3 h-3" />
+          <button aria-label="Send" className="bg-hazard text-hazard-foreground btn-min-sm w-9 flex items-center justify-center label-mono">
+            <Send className="w-3.5 h-3.5" />
           </button>
         </div>
       </DossierCard>
