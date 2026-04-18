@@ -11,6 +11,14 @@ import Blends from "./pages/app/Blends.tsx";
 import BatchPlanner from "./pages/app/BatchPlanner.tsx";
 import Inventory from "./pages/app/Inventory.tsx";
 import Settings from "./pages/app/Settings.tsx";
+import Lab from "./pages/marketing/Lab.tsx";
+import Chandler from "./pages/marketing/Chandler.tsx";
+import Vault from "./pages/marketing/Vault.tsx";
+import FieldManual from "./pages/marketing/FieldManual.tsx";
+import Dossiers from "./pages/marketing/Dossiers.tsx";
+import Pricing from "./pages/marketing/Pricing.tsx";
+import Manifesto from "./pages/marketing/Manifesto.tsx";
+import Contact from "./pages/marketing/Contact.tsx";
 
 const queryClient = new QueryClient();
 
@@ -22,7 +30,16 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          {/* Mixer is HQ — walk in, get a beaker. */}
+          {/* Marketing pages */}
+          <Route path="/lab" element={<Lab />} />
+          <Route path="/chandler" element={<Chandler />} />
+          <Route path="/vault" element={<Vault />} />
+          <Route path="/field-manual" element={<FieldManual />} />
+          <Route path="/dossiers" element={<Dossiers />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/manifesto" element={<Manifesto />} />
+          <Route path="/contact" element={<Contact />} />
+          {/* App */}
           <Route path="/app" element={<Navigate to="/app/mixer" replace />} />
           <Route path="/app/mixer" element={<Mixer />} />
           <Route path="/app/library" element={<Library />} />
@@ -39,4 +56,3 @@ const App = () => (
 );
 
 export default App;
-
