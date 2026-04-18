@@ -1,74 +1,98 @@
 import { PaperCard } from "./PaperCard";
+import { FadeInOnScroll } from "./marketing/FadeInOnScroll";
+import { SectionHeader } from "./marketing/SectionHeader";
 
 const blends = [
   {
     id: "88.X-OMEGA",
-    name: "Olive Leaf & Fig",
-    hazard: "CLASS 4 — EXTREME VIBE SHIFT",
-    note: "The scent of a Tuscan villa aggressively asserting dominance over your living room.",
+    name: "Vermont Cider Mill",
+    format: "8OZ SOY CANDLE",
+    operative: "@maple_op",
+    when: "3 days ago",
+    hazard: "CLASS 4 — EXTREME COZY",
+    note: "Wood smoke, pressed apple skins, a barn that's been there since 1902.",
     components: [
-      { label: "OLIVE LEAF & CITRON", pct: 67 },
-      { label: "MEDITERRANEAN FIG", pct: 33 },
+      { label: "SMOKED MAPLE — CANDLESCIENCE", pct: 40 },
+      { label: "BLACK PEPPER — NG", pct: 25 },
+      { label: "APPLE SKIN — BRAMBLEBERRY", pct: 20 },
+      { label: "VETIVER — INDIE", pct: 15 },
     ],
     rotate: -1.2,
   },
   {
     id: "44.K-NOVA",
-    name: "Smoke & Cardamom",
-    hazard: "CLASS 3 — UNSTABLE WARMTH",
-    note: "Reads as: leather jacket borrowed from someone who just disappeared at a poetry reading.",
+    name: "Hotel Lobby Linen",
+    format: "4OZ LINEN SPRAY",
+    operative: "@suite_404",
+    when: "1 week ago",
+    hazard: "CLASS 2 — QUIETLY EXPENSIVE",
+    note: "The exact spray they use at that boutique hotel you can't quite remember.",
     components: [
-      { label: "BURNT CEDAR", pct: 52 },
-      { label: "BLACK CARDAMOM", pct: 28 },
-      { label: "TONKA RESIDUE", pct: 20 },
+      { label: "WHITE TEA — CANDLESCIENCE", pct: 50 },
+      { label: "BERGAMOT (BFC-FREE) — NG", pct: 30 },
+      { label: "WHITE MUSK — LONE STAR", pct: 20 },
     ],
     rotate: 1.6,
   },
   {
     id: "21.J-DRIFT",
-    name: "Salt Driftwood",
-    hazard: "CLASS 2 — COASTAL DELUSION",
-    note: "Engineers a memory of a coastline you have never visited. Highly addictive.",
+    name: "Volcano // Working Dupe",
+    format: "10OZ COCONUT WAX",
+    operative: "@coastal_pour",
+    when: "2 days ago",
+    hazard: "CLASS 3 — DUPE OPS",
+    note: "Tropical fruit wall, sugared citrus, the candle every dental office bought in 2019.",
     components: [
-      { label: "ATLANTIC SALT", pct: 44 },
-      { label: "SUN-BLEACHED OAK", pct: 41 },
-      { label: "AMBERGRIS GHOST", pct: 15 },
+      { label: "PINEAPPLE CILANTRO — CS", pct: 35 },
+      { label: "SUGARED ORANGE — NG", pct: 30 },
+      { label: "JASMINE PETALS — BB", pct: 20 },
+      { label: "VANILLA HUSK — INDIE", pct: 15 },
     ],
     rotate: -0.6,
   },
   {
     id: "07.R-PURGE",
-    name: "Tomato Leaf Crime",
-    hazard: "CLASS 5 — DO NOT WEAR INDOORS",
-    note: "Smells like the moment your grandmother realizes you broke the greenhouse. Forbidden in 4 states.",
+    name: "Soap-Safe Vanilla",
+    format: "CP SOAP, 1.2 LB BATCH",
+    operative: "@lyebrigade",
+    when: "5 days ago",
+    hazard: "CLASS 2 — NO DISCOLORATION",
+    note: "Vanillin under 2%. Stays cream-colored at trace. No surprises at unmolding.",
     components: [
-      { label: "GREEN TOMATO LEAF", pct: 60 },
-      { label: "CRUSHED BASIL", pct: 25 },
-      { label: "WET SOIL", pct: 15 },
+      { label: "MADAGASCAR VANILLA STAB. — BB", pct: 60 },
+      { label: "TONKA (LOW VAN.) — NG", pct: 25 },
+      { label: "BENZOIN RESIN — INDIE", pct: 15 },
     ],
     rotate: 1.1,
   },
   {
     id: "55.M-FUR",
-    name: "Old Money Mishap",
-    hazard: "CLASS 3 — INHERITED ENERGY",
-    note: "A generational wealth simulator. May cause involuntary references to 'the property in Maine'.",
+    name: "Goth Christmas",
+    format: "WAX MELT, 2.5 OZ",
+    operative: "@black_advent",
+    when: "yesterday",
+    hazard: "CLASS 4 — DOOM SEASONAL",
+    note: "Frankincense, dried orange, smoldering pine. Christmas if Christmas had a leather jacket.",
     components: [
-      { label: "IRIS POWDER", pct: 48 },
-      { label: "VETIVER", pct: 32 },
-      { label: "WORN SUEDE", pct: 20 },
+      { label: "FRANKINCENSE — INDIE", pct: 40 },
+      { label: "DRIED ORANGE PEEL — NG", pct: 30 },
+      { label: "BURNT PINE — CS", pct: 20 },
+      { label: "BLACK AMBER — BB", pct: 10 },
     ],
     rotate: -1.8,
   },
   {
     id: "92.Z-VOID",
-    name: "Library After Hours",
-    hazard: "CLASS 2 — INTROVERT TRAP",
-    note: "Engineered for people who pretend to read Borges. We see you. We approve.",
+    name: "Car Freshener, Not Insulting",
+    format: "AROMA BEAD VENT CLIP",
+    operative: "@no_pine_tree",
+    when: "4 days ago",
+    hazard: "CLASS 3 — DAILY DRIVER",
+    note: "Engineered to not smell like a 7-Eleven air freshener. Subtle, real, warm.",
     components: [
-      { label: "FOXED PAPER", pct: 55 },
-      { label: "INK & GLUE", pct: 25 },
-      { label: "DUST PARTICULATE", pct: 20 },
+      { label: "TEAKWOOD — CS", pct: 45 },
+      { label: "TOBACCO LEAF — NG", pct: 30 },
+      { label: "MANDARIN — BB", pct: 25 },
     ],
     rotate: 0.8,
   },
@@ -78,56 +102,66 @@ export const Blends = () => {
   return (
     <section id="blends" className="py-20 md:py-28">
       <div className="container">
-        <div className="flex items-end justify-between gap-6 flex-wrap mb-12">
-          <div>
-            <div className="label-mono text-hazard">▼ ARCHIVE / SECTION 02</div>
-            <h2 className="display text-5xl md:text-7xl mt-3">
-              Classified<br />Blends.
-            </h2>
-          </div>
-          <p className="typewriter max-w-md text-ink-soft">
-            Six profiles cleared for public viewing. The other 1,402 remain sealed
-            pending review. <span className="redact">REASON WITHHELD</span>.
-          </p>
-        </div>
+        <SectionHeader
+          code="▼ ARCHIVE / SECTION 04 — DECLASSIFIED"
+          heading={
+            <>
+              Real recipes.<br />
+              Real operatives.
+            </>
+          }
+          subtitle="Six dossiers cleared for public viewing. Candles, sprays, soap, melts, car clips. The other 1,402 are still sealed."
+        />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blends.map((b, i) => (
-            <PaperCard
-              key={b.id}
-              rotate={b.rotate}
-              withTape={i % 3 === 0 ? "left" : i % 3 === 1 ? "center" : "right"}
-              className="p-6 lift"
-            >
-              <div className="flex items-center justify-between border-b border-ink/30 pb-3">
-                <span className="label-mono text-ink-mute">FILE_ID {b.id}</span>
-                <span className="label-mono bg-ink text-paper px-2 py-0.5 text-[10px]">SEALED</span>
-              </div>
-              <h3 className="display text-3xl mt-5">{b.name}</h3>
-              <div className="redact-hazard label-mono mt-3 text-[10px]">{b.hazard}</div>
-              <p className="typewriter text-sm mt-4 text-ink-soft min-h-[60px]">{b.note}</p>
+            <FadeInOnScroll key={b.id} delay={i * 60}>
+              <PaperCard
+                rotate={b.rotate}
+                withTape={i % 3 === 0 ? "left" : i % 3 === 1 ? "center" : "right"}
+                className="p-6 lift group h-full"
+              >
+                <div className="flex items-center justify-between border-b border-ink/30 pb-3">
+                  <span className="label-mono text-ink-mute">FILE_ID {b.id}</span>
+                  <span className="label-mono bg-ink text-paper px-2 py-0.5 text-[10px]">
+                    {b.format}
+                  </span>
+                </div>
+                <h3 className="display text-3xl mt-5">{b.name}</h3>
+                <div className="redact-hazard label-mono mt-3 text-[10px]">
+                  {b.hazard}
+                </div>
+                <p className="typewriter text-sm mt-4 text-ink-soft min-h-[60px]">
+                  {b.note}
+                </p>
 
-              <div className="mt-6 space-y-2">
-                {b.components.map((c) => (
-                  <div key={c.label}>
-                    <div className="flex justify-between label-mono text-[11px]">
-                      <span>{c.label}</span>
-                      <span>{c.pct}%</span>
+                <div className="mt-5 space-y-2">
+                  {b.components.map((c) => (
+                    <div key={c.label}>
+                      <div className="flex justify-between label-mono text-[10px]">
+                        <span className="truncate pr-2">{c.label}</span>
+                        <span>{c.pct}%</span>
+                      </div>
+                      <div className="h-1.5 bg-paper-deep mt-1 relative overflow-hidden">
+                        <div
+                          className="absolute inset-y-0 left-0 bg-ink"
+                          style={{ width: `${c.pct}%` }}
+                        />
+                      </div>
                     </div>
-                    <div className="h-1.5 bg-paper-deep mt-1 relative overflow-hidden">
-                      <div
-                        className="absolute inset-y-0 left-0 bg-ink"
-                        style={{ width: `${c.pct}%` }}
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
+                  ))}
+                </div>
 
-              <button className="mt-6 w-full label-mono border border-ink py-2 hover:bg-ink hover:text-paper transition-colors">
-                REQUEST FORMULA →
-              </button>
-            </PaperCard>
+                <div className="mt-5 pt-3 border-t border-ink/20 flex items-center justify-between label-mono text-[10px] text-ink-mute opacity-0 group-hover:opacity-100 transition-opacity">
+                  <span>BY {b.operative}</span>
+                  <span>· {b.when}</span>
+                </div>
+
+                <button className="mt-4 w-full label-mono border border-ink py-2 hover:bg-ink hover:text-paper transition-colors">
+                  REQUEST FORMULA →
+                </button>
+              </PaperCard>
+            </FadeInOnScroll>
           ))}
         </div>
       </div>
