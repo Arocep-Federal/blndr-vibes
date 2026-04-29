@@ -1,4 +1,4 @@
-import { FlaskConical, Sparkles, Boxes, Copy } from "lucide-react";
+import { FlaskConical, Boxes, Copy, Store } from "lucide-react";
 import { FadeInOnScroll } from "./FadeInOnScroll";
 import { SectionHeader } from "./SectionHeader";
 
@@ -6,29 +6,29 @@ const tiles = [
   {
     icon: FlaskConical,
     code: "01",
-    title: "THE MIXER",
-    body: "Drag sliders, lock ratios, watch flashpoint and IFRA caps update live. Save anything that won't catch fire.",
+    title: "SET DEFAULTS",
+    body: "Save wax + fragrance-load presets once, then switch between candle and melt loads per batch.",
     visual: "slider",
   },
   {
-    icon: Sparkles,
+    icon: Copy,
     code: "02",
-    title: "CHANDLER",
-    body: "AI accomplice. Describe a vibe, paste a brand, drop a season — get a formula matched to oils you actually own.",
+    title: "ADD RECIPES",
+    body: "Keep formulas clean. Batch-only fragrance-load or container overrides never pollute saved recipe data.",
     visual: "chat",
   },
   {
     icon: Boxes,
     code: "03",
-    title: "THE VAULT",
-    body: "Your oils, indexed. CandleScience, Nature's Garden, Brambleberry, your weird Etsy guy — all in one place.",
+    title: "MAKE BATCH",
+    body: "Container counts drive wax, oil, COGS, pitchers, per-pitcher breakdowns, and remainder handling.",
     visual: "rows",
   },
   {
-    icon: Copy,
+    icon: Store,
     code: "04",
-    title: "DUPE MODE",
-    body: "Paste Volcano, MidSummer's Night, Mahogany Teakwood. Get a working starter recipe from your inventory.",
+    title: "PUSH TO STORE",
+    body: "Oil inventory decrements, finished stock rises, and Square or Shopify stays aligned.",
     visual: "morph",
   },
 ];
@@ -111,11 +111,12 @@ export const WhatIsThis = () => {
           code="SECTION 01 / WHAT IS THIS"
           heading={
             <>
-              Four moves.<br />
-              One workspace.
+              Set defaults.<br />
+              Make batch.<br />
+              Done.
             </>
           }
-          subtitle="BLNDR is one app with four jobs. Here's the whole operation."
+          subtitle="The launch workflow is simple: Set Defaults → Add Recipes → Make Batch → Oil Tracked → Push to Store → Done."
         />
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {tiles.map((t, i) => (

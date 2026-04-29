@@ -8,28 +8,28 @@ import { PaperCard } from "./PaperCard";
 
 const faqs = [
   {
-    q: "Does this work with my CandleScience / Nature's Garden / Brambleberry oils?",
-    a: "Yes. Load your oils into the Vault once — by supplier, SKU, or just paste a CSV. CHANDLER and the Mixer pull from what you actually own. We support every major US fragrance-oil supplier and 'your weird Etsy guy' is also fine.",
+    q: "How big is the oil catalog?",
+    a: "4,444 oils across CandleScience, The Flaming Candle, Nature's Garden, Wholesale Supplies Plus, Hive & Honey, and Makesy — with manufacturer sub-brands, name-match search, and IFRA, SDS, and allergen PDFs linked per oil.",
   },
   {
-    q: "Is CHANDLER actually useful or just AI slop?",
-    a: "Useful. It only suggests oils you own, respects IFRA category caps for the format you're making (candle, CP soap, leave-on lotion), and tells you when it doesn't know. It will not invent oils, hallucinate flashpoints, or bluff compliance.",
+    q: "What happens when I make a batch?",
+    a: "BLNDR calculates wax, fragrance oil, COGS, pitchers, per-pitcher breakdowns, and remainders. When you commit the batch, oil inventory decrements and finished stock can push to Square or Shopify.",
   },
   {
-    q: "Can I dupe brand-name candles?",
-    a: "Yes. Paste the name — Volcano, MidSummer's Night, Mahogany Teakwood, Anthropologie Capri Blue, anything — and CHANDLER returns a working starter recipe from your inventory. Fair use, your formula, your bottle.",
+    q: "Can I use different fragrance loads for different products?",
+    a: "Yes. Save multi-formula presets like 8% candle load and 12% wax-melt load, then switch per batch from a dropdown without rebuilding your settings every time.",
   },
   {
-    q: "Soap-safe? Lotion-safe?",
-    a: "The Vault tracks safety per oil and format. CHANDLER won't suggest a vanillin-heavy FO for clear cold-process soap. It won't suggest something flagged for leave-on max load above the cap. It'll say so out loud.",
+    q: "Will one-off changes mess up my saved recipes?",
+    a: "No. Batch-only fragrance-load and container overrides stay on that batch. They do not write back to your saved formula or your container registry.",
   },
   {
-    q: "What about cure time, flashpoint, max load?",
-    a: "Surfaced everywhere. The Mixer warns you before you ship something that won't cure, will flash in the pour, or exceeds max load for the wax type. Cold throw vs hot throw notes are tracked per blend.",
+    q: "What compliance or safety data does it handle?",
+    a: "BLNDR links IFRA certificate, SDS, and allergen statement PDFs per oil and shows wax-spec advisory text when a fragrance load is above or below the wax's published range. It does not claim IFRA enforcement, hard usage-cap validation, compliance reporting, or regulatory threshold policing.",
   },
   {
-    q: "Will my formulas leak?",
-    a: "Encrypted. Yours. We can't read them, sell them, or hand them over. The whole point is plausible deniability — and your own signature scent profile staying yours.",
+    q: "How do discontinued-oil swaps work?",
+    a: "Cross-vendor matching starts with same-name-always-wins. If a vendor drops Gingerbread and another vendor sells Gingerbread, that match rises to the top before broader replacement suggestions.",
   },
 ];
 
@@ -46,9 +46,8 @@ export const FAQ = () => {
               getting.
             </h2>
             <p className="typewriter text-ink-soft mt-5 max-w-sm">
-              Real questions from real chandlers, soapers, and home-fragrance
-              operatives. We do not respond to emails about answers already
-              filed below.
+              Real questions from makers who are tired of discovering stockouts
+              after the wax is melted.
             </p>
           </div>
 

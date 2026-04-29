@@ -8,7 +8,6 @@ import {
   Beaker,
   Boxes,
   Settings as SettingsIcon,
-  BookOpen,
   LogOut,
   Bell,
   ChevronsLeft,
@@ -22,7 +21,6 @@ const navItems = [
   { to: "/app/batch", label: "Batch Planner", icon: Beaker, code: "04" },
   { to: "/app/inventory", label: "Inventory", icon: Boxes, code: "05" },
   { to: "/app/settings", label: "Settings", icon: SettingsIcon, code: "06" },
-  { to: "/app/docs", label: "Field Manual", icon: BookOpen, code: "07" },
 ];
 
 interface AppShellProps {
@@ -64,7 +62,7 @@ export const AppShell = ({ children, title, subtitle, fileId, actions }: AppShel
           </div>
           {!collapsed && (
             <div className="label-mono text-[9px] text-ink-mute mt-1">
-              UNAUTH. EXTRACTION UNIT
+              MAKER OPS SYSTEM
             </div>
           )}
         </Link>
@@ -105,8 +103,8 @@ export const AppShell = ({ children, title, subtitle, fileId, actions }: AppShel
                   RJ
                 </div>
                 <div className="flex-1 min-w-0">
-                  <div className="label-mono text-[10px] truncate">OPERATIVE_RJ</div>
-                  <div className="label-mono text-[8px] text-ink-mute">CLEARANCE: BETA</div>
+                  <div className="label-mono text-[10px] truncate">MAKER_RJ</div>
+                  <div className="label-mono text-[8px] text-ink-mute">WORKSPACE: BETA</div>
                 </div>
               </div>
               <div className="flex items-center justify-between label-mono text-[9px] text-ink-mute mb-2">
@@ -139,7 +137,7 @@ export const AppShell = ({ children, title, subtitle, fileId, actions }: AppShel
                   FILE {fileId || "OPEN"}
                 </span>
                 <span className="label-mono text-[10px] text-ink-mute">
-                  ● LIVE FEED
+                  ● LIVE MATH
                 </span>
               </div>
               <h1 className="font-display text-3xl md:text-4xl">{title}</h1>
@@ -159,12 +157,12 @@ export const AppShell = ({ children, title, subtitle, fileId, actions }: AppShel
             <div className="flex marquee-track whitespace-nowrap label-mono text-[10px] py-1">
               {Array.from({ length: 2 }).map((_, i) => (
                 <div key={i} className="flex gap-8 px-8 shrink-0">
-                  <span>● TRANSMISSION ACTIVE</span>
-                  <span>SESSION_ID 88.X-OMEGA</span>
-                  <span>BUDGET REMAINING: $200.00</span>
-                  <span>HAZARD CLASS 4</span>
-                  <span>DO NOT DEVIATE FROM RATIOS</span>
-                  <span>● AGENT ON STANDBY</span>
+                  <span>SET DEFAULTS</span>
+                  <span>ADD RECIPES</span>
+                  <span>MAKE BATCH</span>
+                  <span>OIL TRACKED</span>
+                  <span>PUSH TO STORE</span>
+                  <span>DONE</span>
                 </div>
               ))}
             </div>

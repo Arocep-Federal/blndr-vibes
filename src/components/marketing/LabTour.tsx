@@ -5,42 +5,42 @@ const screens = [
   {
     icon: FlaskConical,
     code: "01",
-    title: "MIXER",
-    note: "Sliders, ratio lock, IFRA caps, flashpoint live.",
-    rows: ["VANILLA BEAN — 45%", "SMOKED OAK — 35%", "BERGAMOT — 20%"],
-    badge: "HAZARD 3",
+    title: "SETTINGS",
+    note: "Preset wax + fragrance load combinations for repeat production.",
+    rows: ["CANDLE LOAD — 8%", "MELT LOAD — 12%", "PITCHER CAP — 64OZ"],
+    badge: "DEFAULTS",
   },
   {
     icon: Boxes,
     code: "02",
-    title: "VAULT",
-    note: "Every oil you own. Notes only you can read.",
-    rows: ["247 OILS LOADED", "12 LOW STOCK", "3 DISCONTINUED"],
-    badge: "INDEXED",
+    title: "LIBRARY",
+    note: "4,444 oils normalized across six vendor catalogs.",
+    rows: ["$/LB NORMALIZED", "IFRA · SDS · ALLERGEN PDFS", "NAME MATCH SEARCH"],
+    badge: "4,444",
   },
   {
     icon: Beaker,
     code: "03",
     title: "BATCH MATH",
-    note: "Pour 1 candle or 200. The math holds.",
-    rows: ["12 × 8OZ JARS", "WAX: 5.2 LB", "FO: 8.3 OZ"],
-    badge: "READY",
+    note: "Container counts drive wax, oil, COGS, and pitchers.",
+    rows: ["41 UNITS", "WAX: 218.6 OZ", "FO: 26.2 OZ"],
+    badge: "NO BAD MATH",
   },
   {
     icon: Copy,
     code: "04",
-    title: "DUPE MODE",
-    note: "Paste a brand. Get a starter recipe.",
-    rows: ["TARGET: VOLCANO", "MATCH: 87%", "OILS USED: 4"],
-    badge: "MATCHED",
+    title: "VAULT",
+    note: "Make Batch decrements oil and flags true restock needs.",
+    rows: ["CHERRY ECLIPSE -21.8OZ", "LEATHER -4.5OZ", "RESTOCK QUEUE READY"],
+    badge: "TRACKED",
   },
   {
     icon: FileText,
     code: "05",
-    title: "DOSSIERS",
-    note: "Every formula filed. Every batch logged.",
-    rows: ["48 ACTIVE BLENDS", "LAST POUR: 04:33", "EXPORT: CSV / PDF"],
-    badge: "ARCHIVED",
+    title: "STORE PUSH",
+    note: "Finished inventory rises where you sell.",
+    rows: ["SQUARE +41", "SHOPIFY +41", "SYNC LOG SAVED"],
+    badge: "DONE",
   },
 ];
 
@@ -52,11 +52,11 @@ export const LabTour = () => {
           code="SECTION 03 / WALK THE LAB"
           heading={
             <>
-              Five rooms.<br />
-              No tour guide.
+              One workflow.<br />
+              No notebook math.
             </>
           }
-          subtitle="Scroll sideways. Each screen does one thing well — and they all talk to each other."
+          subtitle="Set Defaults → Add Recipes → Make Batch → Oil Tracked → Push to Store → Done."
         />
       </div>
       <div className="overflow-x-auto pb-6 px-4 md:px-8 scrollbar-thin">

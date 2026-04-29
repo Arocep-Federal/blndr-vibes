@@ -12,44 +12,44 @@ import { FadeInOnScroll } from "@/components/marketing/FadeInOnScroll";
 
 const homeExchanges = [
   {
-    user: "a fall candle that doesn't smell like every other pumpkin",
-    thinking: "scanning your vault for non-cliché fall…",
-    formulaTitle: "Vermont Cider Mill",
-    formulaSubtitle: "8oz soy · cure 14 days",
-    hazard: "HAZ 4",
-    flashpoint: "168°F",
+    user: "make 41 units of Queen of Hearts with my default 12% load",
+    thinking: "checking presets, containers, oil stock, and storefront targets…",
+    formulaTitle: "Queen of Hearts Batch",
+    formulaSubtitle: "41 units · Square + Shopify ready",
+    hazard: "COGS 67.7%",
+    flashpoint: "$302.02 profit",
     components: [
-      { name: "SMOKED MAPLE", pct: 40 },
-      { name: "BLACK PEPPER", pct: 25 },
-      { name: "APPLE SKIN", pct: 20 },
-      { name: "VETIVER", pct: 15 },
+      { name: "48OZ CANDLE", pct: 40 },
+      { name: "16OZ CANDLE", pct: 25 },
+      { name: "8OZ CANDLE", pct: 20 },
+      { name: "MELTS", pct: 15 },
     ],
   },
   {
-    user: "dupe Volcano by Capri Blue with my CandleScience oils",
-    thinking: "matching pyramid to your inventory…",
-    formulaTitle: "Volcano // Working Dupe",
-    formulaSubtitle: "10oz coconut wax · 87% match",
-    hazard: "HAZ 3",
-    flashpoint: "180°F",
+    user: "compare Gingerbread swaps after my vendor discontinued it",
+    thinking: "same-name match first, then cross-vendor substitutes…",
+    formulaTitle: "Gingerbread Swap Queue",
+    formulaSubtitle: "same-name match ranked #1",
+    hazard: "4 vendors",
+    flashpoint: "$/lb normalized",
     components: [
-      { name: "PINEAPPLE CILANTRO", pct: 35 },
-      { name: "SUGARED ORANGE", pct: 30 },
-      { name: "JASMINE PETALS", pct: 20 },
-      { name: "VANILLA HUSK", pct: 15 },
+      { name: "NATURE'S GARDEN", pct: 35 },
+      { name: "THE FLAMING CANDLE", pct: 30 },
+      { name: "MAKESY", pct: 20 },
+      { name: "HIVE & HONEY", pct: 15 },
     ],
   },
   {
-    user: "soap-safe vanilla that won't discolor my CP soap",
-    thinking: "filtering vanillin under 2%…",
-    formulaTitle: "Stable Vanilla, Cream Trace",
-    formulaSubtitle: "1.2 lb CP batch · low vanillin",
-    hazard: "HAZ 2",
-    flashpoint: "210°F",
+    user: "run this batch at 10% just this once",
+    thinking: "applying batch-only override without touching saved recipe…",
+    formulaTitle: "Temporary Load Override",
+    formulaSubtitle: "saved formula remains 12%",
+    hazard: "OVERRIDE",
+    flashpoint: "this batch only",
     components: [
-      { name: "MADAGASCAR VAN. STAB.", pct: 60 },
-      { name: "TONKA (LOW VAN.)", pct: 25 },
-      { name: "BENZOIN RESIN", pct: 15 },
+      { name: "WAX", pct: 60 },
+      { name: "FRAGRANCE", pct: 25 },
+      { name: "CONTAINER", pct: 15 },
     ],
   },
 ];
@@ -61,28 +61,28 @@ const Index = () => {
       <StatStrip />
       <WhatIsThis />
 
-      {/* CHANDLER demo section */}
+      {/* Operations demo section */}
       <section className="py-16 md:py-24">
         <div className="container">
           <div className="grid lg:grid-cols-12 gap-10 items-start">
             <div className="lg:col-span-5">
               <SectionHeader
-                code="SECTION 02 / CHANDLER LIVE"
+                code="SECTION 02 / BATCH OPS LIVE"
                 heading={
                   <>
-                    Tell it<br />
-                    a vibe.<br />
-                    Get a<br />
-                    <span className="text-hazard">formula.</span>
+                    Create a batch.<br />
+                    Watch oil<br />
+                    take the hit.<br />
+                    <span className="text-hazard">Stock rises.</span>
                   </>
                 }
-                subtitle="CHANDLER is your AI accomplice. Describe a season, paste a brand, name a feeling — it pulls from oils you own, respects IFRA, and shows its work."
+                subtitle="BLNDR turns settings, recipes, inventory, and storefront stock into one clean production loop. The math moves with the batch."
               />
               <ul className="typewriter text-sm text-ink-soft space-y-2 mt-4">
-                <li>▸ Reads your Vault — won't suggest oils you don't have</li>
-                <li>▸ Caps to IFRA Cat 12 (candles) and Cat 5 (leave-on) by default</li>
-                <li>▸ Flags vanillin discoloration risk for clear soap</li>
-                <li>▸ Tells you when it's guessing</li>
+                <li>▸ Multi-formula presets for wax + fragrance-load combinations</li>
+                <li>▸ $/lb oil costs normalized across vendors for accurate COGS</li>
+                <li>▸ Batch-only overrides that do not rewrite saved recipes</li>
+                <li>▸ Square and Shopify stock pushes after production</li>
               </ul>
             </div>
             <div className="lg:col-span-7">
@@ -100,12 +100,12 @@ const Index = () => {
       <CTAStrip
         heading={
           <>
-            Initiate your<br />
-            own <span className="text-hazard">chaos.</span>
+            Get out of<br />
+            the <span className="text-hazard">scratchpads.</span>
           </>
         }
-        subtitle="Free tier. Three blends on us. No credit card. We will not email you about anything boring."
-        ctaLabel="ENTER HQ"
+        subtitle="Defaults, recipes, batch math, oil tracking, and store stock in one workflow. No bad math."
+        ctaLabel="OPEN HQ"
         to="/app"
       />
     </MarketingLayout>

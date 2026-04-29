@@ -19,16 +19,16 @@
 @layer base {
   :root {
     /* Paper */
-    --background: 40 28% 86%;
-    --paper: 40 30% 90%;
-    --paper-deep: 38 22% 78%;
-    --paper-shadow: 30 15% 35%;
+    --background: 40 32% 91%;
+    --paper: 40 38% 96%;
+    --paper-deep: 38 28% 86%;
+    --paper-shadow: 30 12% 42%;
     --foreground: 30 12% 12%;
 
     /* Ink */
     --ink: 30 12% 10%;
-    --ink-soft: 30 10% 25%;
-    --ink-mute: 30 8% 45%;
+    --ink-soft: 30 12% 21%;
+    --ink-mute: 30 8% 38%;
 
     /* Hazard / accent */
     --hazard: 14 78% 42%;
@@ -40,22 +40,22 @@
     --tape-warm: 28 55% 70%;
 
     /* Mapped to shadcn tokens */
-    --card: 40 35% 93%;
+    --card: 40 38% 96%;
     --card-foreground: var(--ink);
     --popover: 40 35% 93%;
     --popover-foreground: var(--ink);
     --primary: var(--ink);
     --primary-foreground: 40 30% 95%;
-    --secondary: 40 25% 80%;
+    --secondary: 40 30% 88%;
     --secondary-foreground: var(--ink);
-    --muted: 40 22% 82%;
+    --muted: 40 28% 88%;
     --muted-foreground: var(--ink-mute);
     --accent: var(--hazard);
     --accent-foreground: var(--hazard-foreground);
     --destructive: 0 70% 40%;
     --destructive-foreground: 40 30% 95%;
-    --border: 30 15% 55%;
-    --input: 30 15% 55%;
+    --border: 30 15% 62%;
+    --input: 30 15% 62%;
     --ring: var(--hazard);
     --radius: 0.125rem;
 
@@ -81,10 +81,10 @@
     @apply bg-background text-foreground;
     font-family: 'JetBrains Mono', monospace;
     background-image:
-      radial-gradient(at 20% 10%, hsl(40 30% 90% / 0.7) 0%, transparent 50%),
-      radial-gradient(at 80% 80%, hsl(30 25% 75% / 0.5) 0%, transparent 50%),
+      radial-gradient(at 20% 10%, hsl(40 38% 97% / 0.8) 0%, transparent 48%),
+      radial-gradient(at 80% 80%, hsl(36 28% 86% / 0.32) 0%, transparent 48%),
       url("/src/assets/paper-texture.jpg");
-    background-size: cover, cover, 800px;
+    background-size: cover, cover, 1000px;
     background-attachment: fixed;
   }
   ::selection { background: hsl(var(--hazard)); color: hsl(var(--hazard-foreground)); }
@@ -131,8 +131,8 @@
     border: 1px solid hsl(30 20% 70%);
     box-shadow:
       0 1px 0 hsl(40 35% 96%) inset,
-      0 12px 24px -12px hsl(var(--paper-shadow) / 0.45),
-      0 30px 50px -25px hsl(var(--paper-shadow) / 0.35);
+      0 10px 20px -14px hsl(var(--paper-shadow) / 0.28),
+      0 22px 42px -28px hsl(var(--paper-shadow) / 0.22);
     position: relative;
   }
   .paper-card::after {
@@ -140,8 +140,8 @@
     position: absolute;
     inset: 0;
     background:
-      radial-gradient(ellipse at top left, transparent 70%, hsl(30 20% 60% / 0.08)),
-      radial-gradient(ellipse at bottom right, transparent 65%, hsl(30 20% 50% / 0.12));
+      radial-gradient(ellipse at top left, transparent 72%, hsl(30 20% 60% / 0.035)),
+      radial-gradient(ellipse at bottom right, transparent 68%, hsl(30 20% 50% / 0.055));
     pointer-events: none;
     mix-blend-mode: multiply;
   }

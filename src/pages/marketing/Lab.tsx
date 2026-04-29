@@ -8,33 +8,33 @@ import { LiveMixerDemo } from "@/components/marketing/LiveMixerDemo";
 import { AnimatedStat } from "@/components/marketing/AnimatedStat";
 
 const workflow = [
-  { code: "01", title: "BRIEF", body: "Describe the candle, soap, or spray you want." },
-  { code: "02", title: "MIX", body: "Drag sliders. Lock ratios. Watch caps update live." },
-  { code: "03", title: "TEST", body: "Pour a tester. Note cold/hot throw in the dossier." },
-  { code: "04", title: "BATCH", body: "Scale 1 → 200. The math holds. Reorder list auto-builds." },
-  { code: "05", title: "POUR", body: "Print labels. Ship. File the dossier. Repeat." },
+  { code: "01", title: "SET DEFAULTS", body: "Choose wax, pitcher capacity, costs, and saved FO-load presets." },
+  { code: "02", title: "ADD RECIPES", body: "Keep formulas clean while defaults do the repetitive math." },
+  { code: "03", title: "MAKE BATCH", body: "Unit counts calculate wax, oil, COGS, and pitcher needs." },
+  { code: "04", title: "OIL TRACKED", body: "Committed batches decrement oil and expose restock gaps." },
+  { code: "05", title: "PUSH TO STORE", body: "Finished stock rises in Square or Shopify when production is done." },
 ];
 
 const callouts = [
   {
     code: "01",
-    title: "RATIO SLIDERS",
-    body: "Drag any oil; the others auto-rebalance. Lock pin to keep one fixed.",
+    title: "MULTI-FORMULA PRESETS",
+    body: "Save wax + fragrance-load combinations and switch per batch from a dropdown.",
   },
   {
     code: "02",
-    title: "FLASHPOINT GUARD",
-    body: "Live weighted-average flashpoint vs your wax pour temp. Red if you'd flash.",
+    title: "BATCH-ONLY OVERRIDES",
+    body: "Custom FL% or custom container for this batch only, without rewriting saved data.",
   },
   {
     code: "03",
-    title: "IFRA CAP BADGE",
-    body: "Cat 12 for candles, Cat 5 for leave-on. Auto-clamp or warn — your call.",
+    title: "WAX-SPEC ADVISORY",
+    body: "Soft warnings when fragrance load is outside the wax's published range.",
   },
   {
     code: "04",
-    title: "SAVE TO VAULT",
-    body: "Every iteration auto-versions. Roll back. Branch. Compare side-by-side.",
+    title: "PER-PITCHER BREAKDOWNS",
+    body: "Large batches split into pitcher-level ingredient totals with remainder handling.",
   },
 ];
 
@@ -49,7 +49,7 @@ const Lab = () => {
             get <span className="text-hazard">classified.</span>
           </>
         }
-        subtitle="The Mixer is your bench. Drag sliders, lock ratios, watch flashpoint and IFRA max load update live. Save anything that doesn't catch fire."
+        subtitle="The Batch Planner is where defaults become production math. Set the load, add recipes, make the batch, decrement oil, and push finished stock to the store."
         watermark="THE LAB"
         right={
           <FadeInOnScroll>
@@ -65,11 +65,12 @@ const Lab = () => {
             code="WORKFLOW / FIVE STEPS"
             heading={
               <>
-                Brief → Mix →<br />
-                Test → Batch → Pour.
+                Set Defaults →<br />
+                Add Recipes →<br />
+                Make Batch.
               </>
             }
-            subtitle="One unbroken loop. CHANDLER rides shotgun the whole way."
+            subtitle="Saving a plan is optional. The required loop is production: oil tracked, stock pushed, done."
           />
           <div className="relative">
             {/* connecting line */}
@@ -110,9 +111,9 @@ const Lab = () => {
             code="UNDER THE HOOD / THE MIXER"
             heading={
               <>
-                Four guards<br />
-                stop you<br />
-                shipping garbage.
+                Flex where<br />
+                makers actually<br />
+                need it.
               </>
             }
           />
@@ -142,22 +143,20 @@ const Lab = () => {
                 code="THE MATH / FO LOAD"
                 heading={
                   <>
-                    Why your<br />
-                    10% load<br />
-                    is actually 8%.
+                    No more<br />
+                    notebook math.
                   </>
                 }
-                subtitle="The math everyone in the Facebook groups gets wrong."
+                subtitle="Container counts drive the batch. BLNDR keeps the formula, costs, pitcher math, and inventory movement in sync."
               />
               <div className="typewriter text-sm text-ink-soft space-y-3 max-w-md">
                 <p>
-                  When you say "10% FO load," you usually mean 10% of the total
-                  weight — wax + FO. Most calculators do it as 10% of the wax
-                  alone. That's a 2% error on every candle.
+                  Make 41 units and the planner calculates wax, fragrance oil,
+                  containers, COGS, pitcher count, and any partial-pitcher remainder.
                 </p>
                 <p>
-                  The Mixer does both, side by side, so you ship what you meant
-                  to ship.
+                  Commit the batch and the Vault takes the oil hit while finished
+                  inventory rises for Square or Shopify.
                 </p>
               </div>
             </div>
@@ -205,15 +204,15 @@ const Lab = () => {
               </div>
               <div className="label-mono text-hazard">IFRA / WHAT WE PULL</div>
               <h2 className="display text-4xl md:text-5xl mt-3">
-                Latest IFRA caps.<br />
-                You stay legal.<br />
-                <span className="text-hazard">Mostly.</span>
+                Clear advisories.<br />
+                No fake<br />
+                <span className="text-hazard">compliance claims.</span>
               </h2>
               <p className="typewriter text-ink-soft mt-5 max-w-xl mx-auto">
-                We pull the most recent IFRA category caps for the format
-                you're making (Cat 12 for candles, Cat 5 for leave-on). The
-                Mixer warns or auto-clamps before you exceed them. It will
-                also tell you when an oil's IFRA data is missing.
+                BLNDR links IFRA cert, SDS, and allergen statement PDFs per oil.
+                It also shows wax-spec advisory text when a fragrance load is
+                outside the wax's published range. It does not enforce IFRA,
+                validate hard regulatory thresholds, or generate compliance reports.
               </p>
               <p className="scribble text-sm mt-3">
                 *not legal advice. but better than guessing.*
@@ -226,13 +225,13 @@ const Lab = () => {
       <CTAStrip
         heading={
           <>
-            Open the<br />
-            <span className="text-hazard">Mixer.</span>
+            Make the<br />
+            <span className="text-hazard">batch.</span>
           </>
         }
-        subtitle="Three free blends. Save them, scale them, batch them. No card required."
-        ctaLabel="OPEN THE MIXER"
-        to="/app/mixer"
+        subtitle="Defaults, recipes, COGS, pitchers, oil tracking, and store stock in one production pass."
+        ctaLabel="OPEN BATCH PLANNER"
+        to="/app/batch"
       />
     </MarketingLayout>
   );
