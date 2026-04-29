@@ -4,19 +4,18 @@ import { cn } from "@/lib/utils";
 
 const links = [
   { to: "/lab", label: "Lab" },
-  { to: "/chandler", label: "Chandler" },
   { to: "/vault", label: "Vault" },
-  { to: "/field-manual", label: "Field Manual" },
+  { to: "/app/batch", label: "Batch Planner" },
   { to: "/pricing", label: "Pricing" },
 ];
 
 const marqueeItems = [
-  "● TRANSMISSION ACTIVE",
-  "4,812 CANDLES POURED THIS WEEK",
-  "DO NOT EXCEED IFRA MAX LOAD",
-  "CURE TIME: 14 DAYS MINIMUM",
-  "● UNAUTHORIZED EXTRACTION UNIT",
-  "FILE_ID 88.X-OMEGA",
+  "SET DEFAULTS",
+  "ADD RECIPES",
+  "MAKE BATCH",
+  "OIL TRACKED",
+  "PUSH TO STORE",
+  "DONE",
 ];
 
 export const MarketingNav = () => {
@@ -42,7 +41,7 @@ export const MarketingNav = () => {
           <Link to="/" className="flex items-baseline gap-3">
             <span className="font-display text-2xl tracking-tight">BLNDR</span>
             <span className="hidden sm:inline label-mono text-ink-mute">
-              UNAUTH. EXTRACTION UNIT
+              MAKER OPS SYSTEM
             </span>
           </Link>
           <nav className="hidden md:flex items-center gap-6">
@@ -64,7 +63,7 @@ export const MarketingNav = () => {
               to="/app"
               className="label-mono bg-ink text-paper px-4 py-2 hover:bg-hazard transition-colors"
             >
-              Enter HQ →
+              Open HQ →
             </Link>
           </nav>
           <button
@@ -96,7 +95,7 @@ export const MarketingNav = () => {
               to="/app"
               className="label-mono bg-ink text-paper px-4 py-2 inline-block w-fit"
             >
-              Enter HQ →
+              Open HQ →
             </Link>
           </div>
         </div>
@@ -106,8 +105,11 @@ export const MarketingNav = () => {
         <div className="flex marquee-track whitespace-nowrap label-mono py-1.5">
           {Array.from({ length: 2 }).map((_, i) => (
             <div key={i} className="flex gap-8 px-8 shrink-0">
-              {marqueeItems.map((m) => (
-                <span key={m}>{m}</span>
+              {marqueeItems.map((m, index) => (
+                <span key={m} className="inline-flex items-center gap-8">
+                  {m}
+                  {index < marqueeItems.length - 1 && <span className="text-hazard">→</span>}
+                </span>
               ))}
             </div>
           ))}
