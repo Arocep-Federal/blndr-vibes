@@ -3,9 +3,8 @@ import { Link, NavLink } from "react-router-dom";
 import { cn } from "@/lib/utils";
 
 const links = [
-  { to: "/lab", label: "Lab" },
+  { to: "/batch-planner", label: "Batch Planner" },
   { to: "/vault", label: "Vault" },
-  { to: "/app/batch", label: "Batch Planner" },
   { to: "/pricing", label: "Pricing" },
 ];
 

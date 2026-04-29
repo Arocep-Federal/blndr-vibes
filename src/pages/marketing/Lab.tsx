@@ -230,8 +230,8 @@ const Lab = () => {
           </>
         }
         subtitle="Defaults, recipes, COGS, pitchers, oil tracking, and store stock in one production pass."
-        ctaLabel="OPEN BATCH PLANNER"
-        to="/app/batch"
+        ctaLabel="OPEN HQ"
+        to="/app"
       />
     </MarketingLayout>
   );
