@@ -22,11 +22,11 @@ const blends = [
   {
     id: "44.K-NOVA",
     name: "Hotel Lobby Linen",
-    format: "4OZ LINEN SPRAY",
+    format: "4OZ TIN CANDLE",
     operative: "@suite_404",
     when: "1 week ago",
     hazard: "CLASS 2 — QUIETLY EXPENSIVE",
-    note: "The exact spray they use at that boutique hotel you can't quite remember.",
+    note: "The exact lobby scent from that boutique hotel you can't quite remember.",
     components: [
       { label: "WHITE TEA — CANDLESCIENCE", pct: 50 },
       { label: "BERGAMOT (BFC-FREE) — NG", pct: 30 },
@@ -52,12 +52,12 @@ const blends = [
   },
   {
     id: "07.R-PURGE",
-    name: "Soap-Safe Vanilla",
-    format: "CP SOAP, 1.2 LB BATCH",
+    name: "Cream Vanilla Melt",
+    format: "WAX MELT, 1.2 LB BATCH",
     operative: "@lyebrigade",
     when: "5 days ago",
-    hazard: "CLASS 2 — NO DISCOLORATION",
-    note: "Vanillin under 2%. Stays cream-colored at trace. No surprises at unmolding.",
+    hazard: "CLASS 2 — CLEAN WARMTH",
+    note: "Soft vanilla built for wax melts without turning the room into a cupcake hostage situation.",
     components: [
       { label: "MADAGASCAR VANILLA STAB. — BB", pct: 60 },
       { label: "TONKA (LOW VAN.) — NG", pct: 25 },
@@ -106,11 +106,11 @@ export const Blends = () => {
           code="▼ ARCHIVE / SECTION 04 — DECLASSIFIED"
           heading={
             <>
-              Real recipes.<br />
-              Real operatives.
+              Real batches.<br />
+              Real makers.
             </>
           }
-          subtitle="Six dossiers cleared for public viewing. Candles, sprays, soap, melts, car clips. The other 1,402 are still sealed."
+          subtitle="Six production-ready formulas cleared for public viewing. The rest are still earning their keep in somebody's batch planner."
         />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
