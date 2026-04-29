@@ -47,7 +47,7 @@ export const CTAStrip = ({
                 <span>→</span>
               </Link>
               <div className="label-mono text-paper/60 mt-3">
-                (BEFORE THEY SHUT US DOWN)
+                SET DEFAULTS → ADD RECIPES → MAKE BATCH
               </div>
             </div>
           </div>
