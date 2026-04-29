@@ -29,6 +29,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           {/* Marketing pages */}
           <Route path="/lab" element={<Lab />} />
+          <Route path="/batch-planner" element={<Lab />} />
           <Route path="/vault" element={<Vault />} />
           <Route path="/chandler" element={<Navigate to="/lab" replace />} />
           <Route path="/field-manual" element={<Navigate to="/lab" replace />} />
