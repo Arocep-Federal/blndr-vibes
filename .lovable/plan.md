@@ -1,143 +1,206 @@
+## BLNDR.io launch repositioning plan — approved direction
 
+BLNDR.io moves from spy-flavored formulation copy to practical maker operations: defaults, recipes, batch math, oil inventory, and store stock in one production workflow.
 
-## Full content + animation map, page by page
+### Core positioning
 
-Candle/B&B/home-fragrance vocabulary throughout. One workspace = **Mixer**. CHANDLER = AI inside it. Duping = a starter prompt, not a page.
+**Headline**
 
----
+Inventory, recipes, and batch math in one place — finally.
 
-### Global elements (every page)
+**Support line**
 
-**MarketingNav** — Lab · Chandler · Vault · Field Manual · Pricing · `Enter HQ →`
-- Animation: marquee status bar persists; on scroll past 80px, nav shrinks + adds bottom border (smooth 200ms)
-- Marquee copy rotates: `● TRANSMISSION ACTIVE` · `4,812 CANDLES POURED THIS WEEK` · `DO NOT EXCEED IFRA MAX LOAD` · `CURE TIME: 14 DAYS MINIMUM`
+Get out of the notebook and scratchpads. BLNDR handles the defaults, recipes, batch math, oil drawdown, and store inventory push — no bad math hiding in the margins.
 
-**MarketingFooter** — sitemap, "EST. 2024 / UNDISCLOSED INDUSTRIAL UNIT", legal redacted-bar links
+**Snark line**
 
-**Section pattern** — snarky display heading + plain subtitle underneath. Always.
+Create a batch. Watch oil take the hit and stock rise.
 
----
+**Workflow backbone**
 
-### `/` HOME
+```text
+Set Defaults → Add Recipes → Make Batch → Oil Tracked → Push to Store → Done
+```
 
-| Block | Copy | Animation/Interaction |
-|---|---|---|
-| **Hero L (dossier)** | Heading: *"Mix the scents they redacted."* Subtitle: *"A formulation studio for candle makers, soap chemists, and home-fragrance operatives. Build recipes, track oils, dupe the brands, ship the batch."* | Watermark "CLASSIFIED" parallax-drifts on scroll |
-| **Hero R (LiveMixerDemo)** | 3 sliders: Vanilla Bean 45% / Smoked Oak 35% / Bergamot 20%. Live "HAZARD CLASS" badge | Drag sliders → percentages auto-rebalance, hazard class ticks 2→5, "FLASHPOINT: 168°F" updates |
-| **Stat strip** | `4,812 candles poured` · `1,247 operatives` · `89 brands duped` | Count-up on scroll-in |
-| **What Is This (4 tiles)** | THE MIXER / CHANDLER / THE VAULT / DUPE MODE — each 1-line plain description | Each tile has 3-frame loop: mixer slider wiggles, chat bubble types, inventory row ticks, perfume-bottle→formula-card morphs |
-| **CHANDLER demo** | Scripted exchange: User: *"a fall candle that doesn't smell like every other pumpkin"* → CHANDLER: thinking dots → formula card snaps in (Smoked Maple 40 / Black Pepper 25 / Apple Skin 20 / Vetiver 15) | Typewriter stream, blinking cursor, formula card scale-in |
-| **Lab Tour** | 5 annotated app-screen mocks: Mixer, Vault, Batch Math, Dupe Mode, Dossiers | Horizontal scroll-snap on desktop; fade-stack on mobile; labels fade in on snap |
-| **Classified Blends grid** | Reframed: 6 user-submitted candle/soap/spray recipes w/ operative names + dates | Hover: paper-shuffle lift, reveals "by @operative_name · 3 days ago" |
-| **FAQ** | 6 candle-maker questions (see below) | Accordion w/ existing animation |
-| **CTA** | *"Initiate your own chaos."* | Hazard-stripe button pulse |
+Saving a batch plan is optional and archival. It should not be framed as a required step in the core workflow.
 
 ---
 
-### `/lab` THE LAB (Mixer deep-dive)
+### Audience and voice rules
 
-| Block | Copy | Animation |
-|---|---|---|
-| **PageHero** | *"Where formulas get classified."* Subtitle: *"The Mixer is your bench. Drag sliders, lock ratios, watch flashpoint and IFRA max load update live. Save anything that doesn't catch fire."* | Watermark drift |
-| **Workflow diagram** | Brief → Mix → Test → Batch → Pour | SVG path draws on scroll-in, nodes pulse sequentially |
-| **Mixer screenshot tour** | 4 annotated callouts: ratio sliders, flashpoint guard, IFRA cap badge, save-to-vault | Callouts fade-in staggered |
-| **Math explainer** | *"Why your 10% load is actually 8%."* Plain math on FO/wax ratios | Number ticks animate as you scroll |
-| **IFRA note** | Plain: *"We pull the latest IFRA category caps. You stay legal. Mostly."* | Stamp rotates in |
-| **CTA strip** | "Open the Mixer →" | |
+- Use **makers** as the audience language.
+- Do not use **operators**, **operatives**, or spy-world audience labels in primary product copy.
+- Do not repeatedly qualify the audience as candle/wax-melt makers. Let product scope do the filtering.
+- Keep the brand sharp and slightly snarky, but lead with utility.
+- Avoid broad B&B/home-fragrance claims that imply soaps, sprays, diffusers, lotions, or compliance coverage beyond the product scope.
 
 ---
 
-### `/chandler` CHANDLER
+### Compliance and safety scope
 
-| Block | Copy | Animation |
-|---|---|---|
-| **PageHero** | *"Your AI accomplice. Reads IFRA so you don't."* Subtitle: *"CHANDLER lives in the Mixer. Describe a vibe, paste a brand, drop a season — get a candle/soap/spray formula matched to oils you actually own."* | Terminal-style heading types out on load |
-| **Persona card** | Codename, clearance level, specialty: gourmand / botanical / dupe ops | Stamp wobble on hover |
-| **Looped TerminalDemo** | 3 scripted exchanges cycling every 10s: 1) Vermont cider mill candle, 2) Dupe Volcano by Capri Blue, 3) Soap-safe vanilla that won't discolor | Typewriter, thinking dots, formula card scale-in, fade-out, next prompt |
-| **Example briefs grid** | 8 chips: *"a linen spray for a hotel client"* · *"car freshener that isn't an insult"* · *"dupe Yankee MidSummer's Night"* · *"cold-process soap-safe lavender"* · *"man cave wax melt"* · *"hotel lobby reed diffuser"* · *"goth Christmas candle"* · *"baby-shower-but-not-saccharine"* | Hover: chip flips to show CHANDLER's 1-line take |
-| **What it won't do** | *"Won't recommend oils flagged for vanillin discoloration in clear soap. Won't exceed IFRA. Won't pretend to know flashpoints it doesn't."* | Redact bars sweep in |
-| **CTA** | "Recruit CHANDLER →" | |
+**Allowed claims**
 
----
+- Wax-spec advisory text when fragrance load is above or below the wax's published FO-load range.
+- IFRA certificate PDFs linked per oil.
+- SDS PDFs linked per oil.
+- Allergen statement PDFs linked per oil.
+- Flashpoint and wax-load reference data where available.
 
-### `/vault` THE VAULT (library + inventory)
+**Not allowed claims**
 
-| Block | Copy | Animation |
-|---|---|---|
-| **PageHero** | *"Your oils. Indexed. Owned."* Subtitle: *"Load your CandleScience, Nature's Garden, Brambleberry, or indie-supplier oils once. CHANDLER reads them. The Mixer pulls from them. You stop re-typing."* | |
-| **CSV-drop visual** | Animated file drops into vault → rows populate one by one | Stagger fade-in, count ticks up |
-| **Multi-supplier showcase** | Logo wall (CandleScience, NG, Brambleberry, Lone Star, Aromatics, "your weird Etsy guy") | Logo grid lift on hover |
-| **Private notes** | Mock vault row w/ expanded notes: *"smells like cough syrup in soap, fine in candles, never again in lotion"* | Row expands on click |
-| **CHANDLER reads it** | Diagram: Vault → CHANDLER → Mixer | Arrow draws on scroll |
-| **CTA** | "Stock the vault →" | |
+- IFRA enforcement.
+- Hard usage-cap validation.
+- Compliance reporting.
+- Regulatory threshold policing.
+- “You stay legal” style promises.
+
+Recommended wording: BLNDR links source documents and shows soft wax-spec advisories; it does not replace compliance review.
 
 ---
 
-### `/field-manual` FIELD MANUAL (docs/blog)
+### Product pillars to market
 
-| Block | Copy | Animation |
-|---|---|---|
-| **PageHero** | *"Declassified knowledge."* Subtitle: *"How-tos, scent briefs, IFRA primers, and post-mortems on blends that should not have shipped."* | |
-| **Category strip** | SCENT BRIEFS · TECHNIQUE · COMPLIANCE · DUPES · POST-MORTEMS | Active pill slides |
-| **Article grid (12 placeholders)** | Real-feeling titles: *"Why your vanilla turns brown in CP soap"* · *"Volcano by Capri Blue: a working dupe"* · *"Cure time isn't optional"* · *"IFRA Cat 12 vs Cat 5: what candle makers miss"* · *"Pumpkin without the cliché: 6 starter formulas"* · *"Reed diffuser base ratios that actually wick"* | Card lift + paper-shuffle on hover |
-| **CTA** | "Submit a brief →" | |
+#### 1. Settings: production defaults
+
+Settings are the brain of the app.
+
+Surface these differentiators:
+
+- Multi-formula presets for wax + fragrance-load combinations.
+- Example: 8% candle load and 12% wax-melt load on the same wax.
+- Pitcher capacity, container costs, wick/lid costs, selling prices, and integration settings.
+- Defaults should feel like the reason batch math is reliable.
+
+#### 2. Recipes: clean saved formulas
+
+Recipes store the repeatable formula, not every one-off production decision.
+
+Positioning notes:
+
+- Add and manage formulas without spreadsheet drift.
+- Keep saved recipes clean.
+- Do not place restock awareness here; stock checking happens at batch time.
+- Batch-only overrides should not pollute recipe data.
+
+#### 3. Batch Planner: the operational center
+
+This is the main product story.
+
+Surface these differentiators:
+
+- Container-driven math: unit counts calculate wax, oil, COGS, pitcher count, per-pitcher ingredient breakdowns, and remainders.
+- Restock awareness happens here, at batch time.
+- Partial-pitcher remainder handling is real and should be described directly.
+- Do not overpromise “step-by-step pour instructions.” Use: per-pitcher ingredient breakdowns + remainder handling.
+- Per-batch overrides:
+  - Custom FL% for this batch only.
+  - Custom container for this batch only.
+  - Neither writes back to saved recipe/container registry.
+- Make Batch is the commitment point: oil inventory decrements and finished stock rises.
+
+#### 4. Inventory / Vault: oil ownership and cost truth
+
+Inventory should be positioned as owned oil stock plus accurate costing.
+
+Surface these differentiators:
+
+- Oil inventory decrement after Make Batch.
+- Low-stock and shortage visibility at production time.
+- $/lb cost-of-goods normalized across vendors.
+- Each oil's price displays at the user's preferred buy size with normalized $/lb for one-glance vendor comparison.
+- Accurate COGS per batch should be framed as calculated, not guessed.
+
+#### 5. Library: 4,444-oil catalog engine
+
+This is a major launch differentiator and should be visible as a stat.
+
+Catalog totals:
+
+- 4,444 oils total.
+- CandleScience: 297.
+- The Flaming Candle: 458.
+- Nature's Garden: 1,032.
+- Wholesale Supplies Plus: 1,997.
+- Hive & Honey: 275.
+- Makesy: 385.
+
+Surface these features:
+
+- Manufacturer sub-brand info.
+- IFRA, SDS, and allergen PDFs linked per oil.
+- Live name-match-across-vendors search.
+- Cross-vendor catalog powers Library, Vault Hygiene, swaps, and costing.
+
+#### 6. Vault Hygiene: discontinued-oil swaps
+
+Make this more prominent.
+
+Positioning notes:
+
+- Cross-vendor swap matching helps makers recover from discontinued oils.
+- Same-name-always-wins: if one vendor discontinues “Gingerbread” and another sells “Gingerbread,” that match automatically tops suggestions.
+- Broader suggestions can follow after exact/same-name matches.
+
+#### 7. Store sync: Square and Shopify
+
+Treat Shopify as a peer to Square.
+
+Positioning notes:
+
+- Square and Shopify both belong in the operational layer.
+- Finished stock can be pushed after production.
+- Avoid “Shopify coming later” language unless the UI specifically needs a connection state.
 
 ---
 
-### `/dossiers` CASE FILES
+### Pages and implementation focus
 
-| Block | Copy | Animation |
-|---|---|---|
-| **PageHero** | *"What operatives have made."* Subtitle: *"Real recipes, real makers, real product categories. Filter by candle, soap, spray, melt, diffuser, lotion."* | |
-| **Filter bar** | Family · Format · Cure status · Recency | Pills with active-state slide |
-| **Masonry grid** | 24 dossier cards w/ operative codename, format tag, hazard class, recipe peek | Hover: lift + reveal recipe peek + "REQUEST FORMULA" |
-| **CTA** | "File your own dossier →" | |
+#### Home
 
----
+- Lead with the new headline.
+- Replace spy-first language with maker-ops utility.
+- Use the workflow as the marquee:
 
-### `/pricing` CLEARANCE LEVELS
+```text
+Set Defaults → Add Recipes → Make Batch → Oil Tracked → Push to Store → Done
+```
 
-| Block | Copy | Animation |
-|---|---|---|
-| **PageHero** | *"Pick your clearance."* Subtitle: *"Three tiers. No seat math. Cancel anytime — we won't even ask."* | |
-| **3 tier cards** | RECRUIT (free) · OPERATIVE ($12/mo) · DIRECTOR ($29/mo) — feature lines plainly stated | Cards lift; on hover, "APPROVED" stamp rotates in |
-| **Feature matrix** | Mixer / CHANDLER queries / Vault size / Dupe mode / Batch math / Export / Priority support | Row highlight on hover |
-| **Pricing FAQ** | 4 Qs: refunds, upgrades, team accounts, "is CHANDLER metered?" | Accordion |
-| **Enterprise** | *"Running a 5-chandler operation? Open a secure channel."* | Redact bar sweeps |
+- Replace old “candles poured / operatives / dupes” stats with:
+  - 4,444 oils indexed.
+  - 6 supplier catalogs normalized.
+  - Square + Shopify store sync.
+- Include “Get out of the notebook and scratchpads” messaging, polished into launch-ready copy.
 
----
+#### Lab / Batch Planner marketing
 
-### `/manifesto` (own page now)
+- Reframe from formulation playground to production math workflow.
+- Emphasize multi-formula presets, per-batch overrides, pitcher breakdowns, remainder handling, COGS, inventory drawdown, and store push.
+- Replace strict IFRA/max-load promises with wax-spec advisory language.
 
-Existing manifesto content, trimmed. Sticky redacted seal scroll-pinned right. Signature block at bottom: *"— Filed by the Unauthorized Extraction Unit, 2024."*
+#### Vault
 
----
+- Reframe as oil stock + normalized cost + catalog-backed hygiene.
+- Mention 4,444-oil catalog, source PDFs, $/lb normalization, live name-match search, and discontinued-oil swaps.
 
-### `/contact` SECURE CHANNEL
+#### Pricing
 
-| Block | Copy | Animation |
-|---|---|---|
-| **PageHero** | *"Open a secure channel."* | Typewriter |
-| **Tabs** | WAITLIST · PRESS · PARTNERSHIPS | Tab slide |
-| **Form** | Styled as dossier intake — labels in label-mono, "TRANSMISSION RECEIVED" success state | Stamp rotates in on submit |
+- Sell operational capacity, not spy “clearance.”
+- Tie pricing value to scratchpad replacement: defaults, recipes, batch math, inventory, COGS, Square, Shopify, and swap matching.
 
----
+#### Navigation and deprecated pages
 
-### Rewritten FAQ (home page)
-
-1. *"Does this work with my CandleScience / Nature's Garden / Brambleberry oils?"* — Yes. Load them once into the Vault.
-2. *"Is CHANDLER actually useful or just AI slop?"* — Useful. It only suggests oils you own and respects IFRA caps. It will tell you when it doesn't know.
-3. *"Will my formulas leak?"* — Encrypted. Yours. We can't read them, sell them, or hand them over.
-4. *"Can I dupe brand-name candles?"* — Yes. Paste the name, get a working starter recipe from your inventory. Volcano, MidSummer's Night, Mahogany Teakwood — all fair game.
-5. *"Soap-safe? Lotion-safe?"* — Vault tracks it per-oil. CHANDLER won't suggest a vanillin-heavy FO for clear CP soap.
-6. *"What about cure time, flashpoint, max load?"* — Surfaced everywhere. The Mixer warns you before you ship something that won't cure or will flash in the pour.
+- Remove Chandler, Field Manual, and Dossiers from the primary marketing nav.
+- If old routes remain, redirect them to relevant current pages rather than marketing them.
+- Keep CHANDLER out of the V1 launch funnel.
 
 ---
 
-### Build sequencing (unchanged from prior plan)
+### Final net recommendation
 
-- **Build 1:** Foundation (MarketingNav/Footer/Layout/shared components) + Home + Lab + Chandler
-- **Build 2:** Vault + Field Manual + Dossiers + Pricing + Manifesto + Contact
+The repositioning direction is correct. The site should now sell BLNDR as the maker's production math and inventory operating system, not a secret-agent formulation toy. The strongest launch story is:
 
-CHANDLER demo = looped scripted (option B) unless you say otherwise.
+```text
+Set Defaults → Add Recipes → Make Batch → Oil Tracked → Push to Store → Done
+```
 
+Use the catalog size, normalized $/lb costing, batch-only overrides, multi-formula presets, same-name swap matching, and Square/Shopify sync as the differentiators that make the product feel real.
