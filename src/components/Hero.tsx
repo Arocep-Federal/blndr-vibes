@@ -18,34 +18,33 @@ export const Hero = () => {
 
       <div className="container relative">
         <div className="flex items-center gap-3 mb-6">
-          <span className="label-mono text-hazard border border-hazard px-2 py-0.5">
-            FILE_ID 88.X-OMEGA
+            <span className="label-mono text-hazard border border-hazard px-2 py-0.5">
+              MAKER OPS / LIVE
           </span>
-          <span className="label-mono text-ink-mute">● TRANSMISSION ACTIVE</span>
+          <span className="label-mono text-ink-mute">SET DEFAULTS → PUSH TO STORE</span>
         </div>
 
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* LEFT — dossier */}
           <div className="lg:col-span-7">
             <h1 className="display text-6xl sm:text-7xl md:text-8xl">
-              Mix the<br />
-              scents<br />
-              they<br />
-              <span className="text-hazard">redacted.</span>
+              Inventory,<br />
+              recipes,<br />
+              and batch math<br />
+              <span className="text-hazard">in one place — finally.</span>
             </h1>
             <div className="mt-6 inline-block">
               <span className="redact-hazard label-mono">
-                CANDLE · SOAP · SPRAY · MELT · DIFFUSER
+                SET DEFAULTS → ADD RECIPES → MAKE BATCH
               </span>
             </div>
             <p className="typewriter mt-7 text-base md:text-lg leading-relaxed text-ink-soft max-w-xl">
-              A formulation studio for candle makers, soap chemists, and
-              home-fragrance operatives. Build recipes from oils you already own,
-              dupe the brands you envy, scale the batch, ship the order.
+              Get out of the notebook and scratchpads. BLNDR handles the defaults,
+              recipes, batch math, oil drawdown, and store inventory push — no bad
+              math hiding in the margins.
             </p>
             <p className="typewriter mt-3 text-sm text-ink-soft max-w-xl">
-              Not perfume. Not aspirational. Real FOs from real suppliers, with
-              real flashpoint and IFRA math attached.
+              Create a batch. Watch oil take the hit and stock rise.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -53,18 +52,18 @@ export const Hero = () => {
                 to="/app"
                 className="font-display text-2xl bg-ink text-paper px-6 py-4 inline-flex items-center gap-3 hover:bg-hazard transition-colors"
               >
-                ENTER HQ
+                OPEN HQ
                 <span>→</span>
               </Link>
               <Link
                 to="/lab"
                 className="label-mono border-2 border-ink px-5 py-4 inline-flex items-center gap-2 hover:bg-ink hover:text-paper transition-colors"
               >
-                TOUR THE LAB
+                SEE THE WORKFLOW
               </Link>
             </div>
             <div className="mt-3 label-mono text-ink-mute">
-              FREE TIER. NO CARD. CANCEL ANYTIME — WE WON'T EVEN ASK.
+              4,444 OILS INDEXED · SQUARE + SHOPIFY READY · NO SPREADSHEET DRIFT
             </div>
           </div>
 
@@ -85,10 +84,10 @@ export const Hero = () => {
               <PaperCard className="p-3 flex-1" rotate={1.2}>
                 <div className="label-mono text-hazard text-[10px]">▲ CHANDLER LOG</div>
                 <div className="typewriter text-xs mt-1 text-ink-soft leading-snug">
-                  &gt; brief: vermont cider mill<br />
-                  &gt; vault scan: 247 oils<br />
-                  &gt; matched 4 · IFRA OK<br />
-                  <span className="text-ink">&gt; your move.</span>
+                  &gt; batch: queen of hearts · 41 units<br />
+                  &gt; oil drawdown: cherry eclipse -26.2oz<br />
+                  &gt; store push: stock +41<br />
+                  <span className="text-ink">&gt; done.</span>
                 </div>
               </PaperCard>
             </div>
