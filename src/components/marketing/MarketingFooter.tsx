@@ -5,16 +5,14 @@ const cols = [
     title: "▸ THE APP",
     items: [
       { label: "The Lab", to: "/lab" },
-      { label: "Chandler", to: "/chandler" },
       { label: "The Vault", to: "/vault" },
+      { label: "Batch Planner", to: "/app/batch" },
       { label: "Pricing", to: "/pricing" },
     ],
   },
   {
     title: "▸ ARCHIVE",
     items: [
-      { label: "Field Manual", to: "/field-manual" },
-      { label: "Case Files", to: "/dossiers" },
       { label: "Manifesto", to: "/manifesto" },
       { label: "Contact", to: "/contact" },
     ],
@@ -38,12 +36,12 @@ export const MarketingFooter = () => {
           <div className="md:col-span-2">
             <div className="font-display text-3xl">BLNDR</div>
             <div className="label-mono text-ink-mute mt-1">
-              UNAUTHORIZED EXTRACTION UNIT
+              MAKER OPS SYSTEM
             </div>
             <p className="typewriter text-sm text-ink-soft mt-4 max-w-sm">
-              A formulation studio for candle makers, soap chemists, and
-              home-fragrance operatives. Build recipes, track oils, dupe the
-              brands, ship the batch.
+              Inventory, recipes, and batch math in one place — finally. Set
+              defaults, add recipes, make batches, track oil, and push stock to
+              Square or Shopify.
             </p>
             <div className="mt-5 flex flex-wrap gap-2">
               <span className="redact label-mono text-[10px]">
