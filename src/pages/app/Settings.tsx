@@ -142,7 +142,7 @@ const Settings = () => {
         <DossierCard className="p-6" hover={false}>
           <div className="border-b-2 border-ink/80 pb-4 mb-5">
             <div className="label-mono text-hazard">▼ SECTION 04</div>
-            <h2 className="font-display text-2xl mt-1">EXTERNAL OPERATIVES</h2>
+            <h2 className="font-display text-2xl mt-1">STORE SYNC</h2>
             <p className="scribble text-[13px] text-ink-soft mt-1">
               Channels for moving product. Connect, sync, profit. Or don't. Your call.
             </p>
