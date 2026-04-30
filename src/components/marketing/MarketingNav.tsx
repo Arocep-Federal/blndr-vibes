@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 
 const links = [
   { to: "/batch-planner", label: "Batch Planner" },
-  { to: "/vault", label: "Vault" },
+  { to: "/features", label: "Features" },
   { to: "/pricing", label: "Pricing" },
 ];
 

@@ -5,7 +5,7 @@ const cols = [
     title: "▸ THE APP",
     items: [
       { label: "Batch Planner", to: "/batch-planner" },
-      { label: "The Vault", to: "/vault" },
+      { label: "Features", to: "/features" },
       { label: "Pricing", to: "/pricing" },
     ],
   },
