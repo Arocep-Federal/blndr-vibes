@@ -12,7 +12,7 @@ import BatchPlanner from "./pages/app/BatchPlanner.tsx";
 import Inventory from "./pages/app/Inventory.tsx";
 import Settings from "./pages/app/Settings.tsx";
 import Lab from "./pages/marketing/Lab.tsx";
-import Vault from "./pages/marketing/Vault.tsx";
+import Features from "./pages/marketing/Features.tsx";
 import Pricing from "./pages/marketing/Pricing.tsx";
 import Manifesto from "./pages/marketing/Manifesto.tsx";
 import Contact from "./pages/marketing/Contact.tsx";
@@ -30,10 +30,11 @@ const App = () => (
           {/* Marketing pages */}
           <Route path="/lab" element={<Lab />} />
           <Route path="/batch-planner" element={<Lab />} />
-          <Route path="/vault" element={<Vault />} />
+          <Route path="/features" element={<Features />} />
+          <Route path="/vault" element={<Navigate to="/features" replace />} />
           <Route path="/chandler" element={<Navigate to="/lab" replace />} />
           <Route path="/field-manual" element={<Navigate to="/lab" replace />} />
-          <Route path="/dossiers" element={<Navigate to="/vault" replace />} />
+          <Route path="/dossiers" element={<Navigate to="/features" replace />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/manifesto" element={<Manifesto />} />
           <Route path="/contact" element={<Contact />} />
