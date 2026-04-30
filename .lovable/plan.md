@@ -1,206 +1,117 @@
-## BLNDR.io launch repositioning plan — approved direction
+## Goal
 
-BLNDR.io moves from spy-flavored formulation copy to practical maker operations: defaults, recipes, batch math, oil inventory, and store stock in one production workflow.
+Rebuild `/vault` as `/features` (page name **Features**) — keep all existing content, rename Vault → Owned Oils and Vault Hygiene → Oil Engine, drop hardcoded supplier counts, rewrite hero as a snarky factual list, and add three new animated showcase sections inspired by the screenshots.
 
-### Core positioning
+## Routing & file moves
 
-**Headline**
+- New route `/features` → `src/pages/marketing/Features.tsx` (renamed from `Vault.tsx`).
+- Old `/vault` redirects to `/features` via `<Navigate to="/features" replace />`.
+- `MarketingNav.tsx` + `MarketingFooter.tsx`: link label **Features** → `/features`.
+- Repoint any other in-page `Link to="/vault"` references.
 
-Inventory, recipes, and batch math in one place — finally.
+## Renames (this page only)
 
-**Support line**
+- "The Vault" / "VAULT" watermark → **Owned Oils** / **OWNED OILS**
+- "Vault Hygiene" → **Oil Engine**; "VAULT HYGIENE QUEUE" → **OIL ENGINE QUEUE**
+- "HYGIENE / SWAPS" section code → **ENGINE / SWAPS**
+- Remove the `<br>` in "Discontinued oil / does not get / the last word" → flow as one cleaner heading.
+- Hero section code: `SECTION 03 / FEATURES`.
 
-Get out of the notebook and scratchpads. BLNDR handles the defaults, recipes, batch math, oil drawdown, and store inventory push — no bad math hiding in the margins.
+## Hero (rewrite — features list, not a pitch)
 
-**Snark line**
+- Code: `SECTION 03 / FEATURES`
+- Heading: **"Every System.<br/>One Surface."**
+- Subtitle: **"Features. Owned oils. The oil engine. Restock alerts. Per-size store inventory. Recipe note search. That's the file."**
+- Right-side card: keep the existing OIL COST CHECK PaperCard.
 
-Create a batch. Watch oil take the hit and stock rise.
+## Supplier count handling
 
-**Workflow backbone**
+- Stats strip: replace the `6 SUPPLIER CATALOGS` tile with a label-only tile **`GROWING` / SUPPLIER NETWORK**. Keep `4,444+ OILS INDEXED` and `3 SOURCE PDF TYPES`.
+- Suppliers section header → `CATALOG / GROWING NETWORK`, panel header → **INDEXED SUPPLIERS — AND COUNTING**, footer line *"New catalogs added regularly."*
 
-```text
-Set Defaults → Add Recipes → Make Batch → Oil Tracked → Push to Store → Done
-```
+## Keep (existing content, with renames)
 
-Saving a batch plan is optional and archival. It should not be framed as a required step in the core workflow.
+1. Hero with OIL COST CHECK card
+2. Catalog stats strip (modified per above)
+3. "Know what you own. Know what it costs." — 4 owned-oils feature cards (label VAULT → OWNED OILS)
+4. Indexed suppliers panel (reframed)
+5. Oil Engine Queue + Engine/Swaps copy block (renamed)
+6. CTA strip — heading **"Open the<br/><span class='text-hazard'>Features.</span>"**
 
----
+## New sections
 
-### Audience and voice rules
+### A. Restock Alerts → Batch Planner
 
-- Use **makers** as the audience language.
-- Do not use **operators**, **operatives**, or spy-world audience labels in primary product copy.
-- Do not repeatedly qualify the audience as candle/wax-melt makers. Let product scope do the filtering.
-- Keep the brand sharp and slightly snarky, but lead with utility.
-- Avoid broad B&B/home-fragrance claims that imply soaps, sprays, diffusers, lotions, or compliance coverage beyond the product scope.
+After Oil Engine Queue.
 
----
+- Code: **ALERTS / GO-TIME**
+- Heading: "Low stock isn't a problem. It's a batch waiting to happen."
+- PaperCard "RESTOCK ALERTS" panel, 3 rows: recipe name, oz needed, `10 oz left` hazard badge, hazard-yellow `[+ RESTOCK]` button.
+- Each RESTOCK button is a `<Link to="/app/batch-planner?recipe=<id>">` (link only).
+- Copy: "One tap from alert to mixed batch. The planner opens pre-loaded with the recipe, the wax math, and your owned-oil counts."
 
-### Compliance and safety scope
+### B. Store Inventory (Per-Size Stock)
 
-**Allowed claims**
+After Restock Alerts.
 
-- Wax-spec advisory text when fragrance load is above or below the wax's published FO-load range.
-- IFRA certificate PDFs linked per oil.
-- SDS PDFs linked per oil.
-- Allergen statement PDFs linked per oil.
-- Flashpoint and wax-load reference data where available.
+- Code: **STOCK / PER SIZE**
+- Heading: "Inventory that knows what size you pour."
+- PaperCard mock of the STORE INVENTORY twirl-down: recipe header (BEWITCHED) with sizes (3oz / 4oz / 7oz / 14oz / 48oz), unit counts, and `LOW (< N)` hazard badges where applicable.
+- Animation: opens on scroll via `FadeInOnScroll` + CSS height transition.
+- Copy: "Track finished-goods stock per pour size, not just oil. Square + Shopify sync keeps counts honest; low thresholds fire restock alerts automatically."
 
-**Not allowed claims**
+### C. Recipe Note Search (animated, looping)
 
-- IFRA enforcement.
-- Hard usage-cap validation.
-- Compliance reporting.
-- Regulatory threshold policing.
-- “You stay legal” style promises.
+After Store Inventory, before CTA strip.
 
-Recommended wording: BLNDR links source documents and shows soft wax-spec advisories; it does not replace compliance review.
+- Code: **RECALL / NOTES**
+- Heading: "A customer asks for violet. You answer in one search."
+- Layout: single PaperCard styled like the screenshot — "MY RECIPES" header with a faux search input.
 
----
-
-### Product pillars to market
-
-#### 1. Settings: production defaults
-
-Settings are the brain of the app.
-
-Surface these differentiators:
-
-- Multi-formula presets for wax + fragrance-load combinations.
-- Example: 8% candle load and 12% wax-melt load on the same wax.
-- Pitcher capacity, container costs, wick/lid costs, selling prices, and integration settings.
-- Defaults should feel like the reason batch math is reliable.
-
-#### 2. Recipes: clean saved formulas
-
-Recipes store the repeatable formula, not every one-off production decision.
-
-Positioning notes:
-
-- Add and manage formulas without spreadsheet drift.
-- Keep saved recipes clean.
-- Do not place restock awareness here; stock checking happens at batch time.
-- Batch-only overrides should not pollute recipe data.
-
-#### 3. Batch Planner: the operational center
-
-This is the main product story.
-
-Surface these differentiators:
-
-- Container-driven math: unit counts calculate wax, oil, COGS, pitcher count, per-pitcher ingredient breakdowns, and remainders.
-- Restock awareness happens here, at batch time.
-- Partial-pitcher remainder handling is real and should be described directly.
-- Do not overpromise “step-by-step pour instructions.” Use: per-pitcher ingredient breakdowns + remainder handling.
-- Per-batch overrides:
-  - Custom FL% for this batch only.
-  - Custom container for this batch only.
-  - Neither writes back to saved recipe/container registry.
-- Make Batch is the commitment point: oil inventory decrements and finished stock rises.
-
-#### 4. Inventory / Vault: oil ownership and cost truth
-
-Inventory should be positioned as owned oil stock plus accurate costing.
-
-Surface these differentiators:
-
-- Oil inventory decrement after Make Batch.
-- Low-stock and shortage visibility at production time.
-- $/lb cost-of-goods normalized across vendors.
-- Each oil's price displays at the user's preferred buy size with normalized $/lb for one-glance vendor comparison.
-- Accurate COGS per batch should be framed as calculated, not guessed.
-
-#### 5. Library: 4,444-oil catalog engine
-
-This is a major launch differentiator and should be visible as a stat.
-
-Catalog totals:
-
-- 4,444 oils total.
-- CandleScience: 297.
-- The Flaming Candle: 458.
-- Nature's Garden: 1,032.
-- Wholesale Supplies Plus: 1,997.
-- Hive & Honey: 275.
-- Makesy: 385.
-
-Surface these features:
-
-- Manufacturer sub-brand info.
-- IFRA, SDS, and allergen PDFs linked per oil.
-- Live name-match-across-vendors search.
-- Cross-vendor catalog powers Library, Vault Hygiene, swaps, and costing.
-
-#### 6. Vault Hygiene: discontinued-oil swaps
-
-Make this more prominent.
-
-Positioning notes:
-
-- Cross-vendor swap matching helps makers recover from discontinued oils.
-- Same-name-always-wins: if one vendor discontinues “Gingerbread” and another sells “Gingerbread,” that match automatically tops suggestions.
-- Broader suggestions can follow after exact/same-name matches.
-
-#### 7. Store sync: Square and Shopify
-
-Treat Shopify as a peer to Square.
-
-Positioning notes:
-
-- Square and Shopify both belong in the operational layer.
-- Finished stock can be pushed after production.
-- Avoid “Shopify coming later” language unless the UI specifically needs a connection state.
-
----
-
-### Pages and implementation focus
-
-#### Home
-
-- Lead with the new headline.
-- Replace spy-first language with maker-ops utility.
-- Use the workflow as the marquee:
+**Animation sequence (auto-loops; pauses on hover / off-screen; respects `prefers-reduced-motion`):**
 
 ```text
-Set Defaults → Add Recipes → Make Batch → Oil Tracked → Push to Store → Done
+state 0  →  card shows 3 collapsed rows of the user's actual library:
+            BEWITCHED, EDGEWOOD MANOR, OLIVE LEAF & FIG
+            (notes twirled up, search input empty)
+state 1  →  typewriter types "violet" into the search input
+            (one char ~120ms, blinking caret)
+state 1.5→  list smoothly swaps: the 3 non-matching rows fade/slide out
+            and are replaced by the 3 matching rows —
+            BLACK TIE, BLACK VIOLET & SAFFRON, DESERT BLOOM
+            (still collapsed)
+state 2  →  faux pointer ▶ glides to the first result and "clicks"
+            (scale pulse on the row)
+state 3  →  rows expand: TOP / MID / BASE chip rows fade-in staggered;
+            the VIOLET chip in each gets a hazard pulse
+            (bg-hazard/15 border-hazard text-hazard)
+state 4  →  hold ~3s, collapse rows, clear search,
+            swap back to the original 3 rows → loop
 ```
 
-- Replace old “candles poured / operatives / dupes” stats with:
-  - 4,444 oils indexed.
-  - 6 supplier catalogs normalized.
-  - Square + Shopify store sync.
-- Include “Get out of the notebook and scratchpads” messaging, polished into launch-ready copy.
+- Implement with a tiny local state machine (`phase` 0–4) inside a `RecipeNoteSearchDemo` component co-located in `Features.tsx`. `useEffect` interval drives phases; classNames drive the visuals using existing tokens (`animate-fade-in`, height transition, one-shot `animate-pulse` on the matched chip).
+- Pointer cursor: small absolutely-positioned SVG arrow, animated via `translate` between phases.
+- Pause when off-screen (IntersectionObserver) or on hover; skip animation entirely when `prefers-reduced-motion: reduce`.
+- Copy: "Search any note across every saved recipe. Pull instant matches when a customer wants 'something with violet' or 'no patchouli' — turn a vague request into a sale."
 
-#### Lab / Batch Planner marketing
+## Files touched
 
-- Reframe from formulation playground to production math workflow.
-- Emphasize multi-formula presets, per-batch overrides, pitcher breakdowns, remainder handling, COGS, inventory drawdown, and store push.
-- Replace strict IFRA/max-load promises with wax-spec advisory language.
+- `src/pages/marketing/Features.tsx` (new; replaces `Vault.tsx`)
+- `src/pages/marketing/Vault.tsx` (deleted)
+- `src/App.tsx` — add `/features` route, redirect `/vault` → `/features`
+- `src/components/marketing/MarketingNav.tsx` — label + path update
+- `src/components/marketing/MarketingFooter.tsx` — same
+- Any other `to="/vault"` references → `/features`
 
-#### Vault
+## Visual / technical notes
 
-- Reframe as oil stock + normalized cost + catalog-backed hygiene.
-- Mention 4,444-oil catalog, source PDFs, $/lb normalization, live name-match search, and discontinued-oil swaps.
+- All sections compose from existing primitives (`PaperCard`, `FadeInOnScroll`, `AnimatedStat`, label-mono, hazard tokens). No new global components, no new deps, no new colors.
+- Restock buttons: `bg-hazard text-hazard-foreground`; "10 oz left" badges: `border border-hazard text-hazard label-mono`.
+- Note chips reuse the bordered rectangle pattern; matched note chip uses `bg-hazard/15 border-hazard text-hazard` plus a one-shot pulse.
+- Recipe Note Search animation lives entirely inside its section component — keeps the page self-contained.
 
-#### Pricing
+## Out of scope
 
-- Sell operational capacity, not spy “clearance.”
-- Tie pricing value to scratchpad replacement: defaults, recipes, batch math, inventory, COGS, Square, Shopify, and swap matching.
-
-#### Navigation and deprecated pages
-
-- Remove Chandler, Field Manual, and Dossiers from the primary marketing nav.
-- If old routes remain, redirect them to relevant current pages rather than marketing them.
-- Keep CHANDLER out of the V1 launch funnel.
-
----
-
-### Final net recommendation
-
-The repositioning direction is correct. The site should now sell BLNDR as the maker's production math and inventory operating system, not a secret-agent formulation toy. The strongest launch story is:
-
-```text
-Set Defaults → Add Recipes → Make Batch → Oil Tracked → Push to Store → Done
-```
-
-Use the catalog size, normalized $/lb costing, batch-only overrides, multi-formula presets, same-name swap matching, and Square/Shopify sync as the differentiators that make the product feel real.
+- No actual `/app/batch-planner?recipe=…` handler (link-only marketing demo).
+- No nav/IA changes beyond Vault → Features rename.
+- No business-logic changes; purely a marketing-page rebuild.
