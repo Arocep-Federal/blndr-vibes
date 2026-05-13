@@ -1,33 +1,41 @@
-# Supabase Confirm Signup Email — Dossier Edition
+# BLNDR Brand Guidelines — Agent Handoff
 
-Generate a single self-contained HTML file you can paste into **Supabase → Authentication → Email Templates → Confirm signup**, styled to match the BLNDR classified-dossier aesthetic.
+Produce a single self-contained markdown file at `/mnt/documents/blndr-brand-guidelines.md` that another AI agent can ingest to produce on-brand output (emails, copy, UI, marketing) without access to this codebase.
 
-## Deliverable
+## Source of truth
 
-One file written to `/mnt/documents/blndr-confirm-signup.html`, surfaced as a `<presentation-artifact>` so you can download it.
+Extracted from the live design system:
+- `src/index.css` — HSL tokens, paper/ink/hazard palette, component classes (`.paper-card`, `.tape`, `.redact`, `.label-mono`, `.display`, `.typewriter`, `.scribble`, `.perf-divide`)
+- `tailwind.config.ts` — font families, color scales
+- `src/components/Footer.tsx`, `marketing/PageHero.tsx`, `marketing/CTAStrip.tsx`, `app/StampBadge.tsx`, `app/DossierCard.tsx` — voice, layout, motif usage
+- The four auth email templates already shipped — confirmed working pattern
 
-## Design
+## Sections in the .md
 
-- Cream paper background (`#F4ECDC`), ink-black borders (`#1F1B17`), hazard-rust accent (`#BF4220`)
-- Monospace body (Courier/JetBrains Mono fallback stack) + heavy display headline
-- Faux "stamp" header: `▲ CLEARANCE PENDING — FILE_ID: {{ .Email }}`
-- Big display H1: **CONFIRM YOUR<br>TRANSMISSION.**
-- Snarky typewriter copy ("Someone — allegedly you — requested access to the lab. Verify before we shut the door.")
-- Solid black button → `{{ .ConfirmationURL }}` labeled `▸ VERIFY & ENTER`
-- Mono fine print: 24-hour expiry, "ignore if you didn't request this", footer `// END TRANSMISSION`
-- All styles inline (Supabase strips `<style>` inconsistently across clients); table-based layout for Outlook; max-width 560px; preheader text hidden
-- Uses Supabase tokens: `{{ .ConfirmationURL }}`, `{{ .Email }}`, `{{ .SiteURL }}`
+1. **Brand essence** — name (BLNDR), tagline ("Unauthorized Extraction Unit"), one-paragraph positioning, the "classified dossier / rogue lab" concept
+2. **Voice & tone** — snarky, typewriter-terse, second-person, lab/intel jargon ("transmission", "clearance", "file", "channel", "agent"). Do/don't examples. Subject line patterns (`▲ ALL CAPS — lowercase tail`)
+3. **Lexicon** — recurring tokens: `▲`, `▸`, `//`, `FILE_ID`, `STATUS //`, `END TRANSMISSION`, `▸ DOSSIER PENDING`
+4. **Color system** — HSL + hex equivalents:
+   - Paper `#F4ECDC` / cream bg
+   - Paper deep `#E8DCC0`
+   - Ink `#1F1B17` (borders/text)
+   - Ink soft / ink mute
+   - Hazard rust `#BF4220` (single accent — use sparingly)
+   - Tape warm beige
+   - Selection + dark-mode notes
+5. **Typography** — display: Archivo Black / Oswald / Impact fallback; body: IBM Plex Mono / JetBrains Mono / Courier New fallback. Sizes, leading, tracking, the `text-shadow` trick on `.display`. Email-safe stacks.
+6. **Motifs** — paper card with deckled shadow, tape strip, redaction blocks (ink + hazard variants), stamp badges, perforated dividers, hazard stripe marquee, watermark display text
+7. **Layout principles** — max-width 560 for email / 1400 container for web, generous whitespace, asymmetric grids, label-mono meta strips above headlines
+8. **Component recipes (HTML/CSS snippets)** — inline-styled email-safe versions of: stamp header, hazard meta strip, FROM/TO swap card, solid-black CTA button, fallback URL block, footer. Copy-pasteable.
+9. **Email template conventions** — table-based layout, max-width 560, inline styles only, no remote images, preheader hidden, Supabase token list (`{{ .ConfirmationURL }}`, `{{ .Email }}`, `{{ .NewEmail }}`, `{{ .SiteURL }}`), subject-line formula
+10. **Don'ts** — no emoji (except ▲▸ glyphs), no rounded corners >2px, no gradients beyond the paper texture, no second accent color, no sans-serif body, no friendly corporate copy
 
-## Technical notes
+## Format
 
-- Pure HTML, no external CSS or JS, no remote images (avoids Gmail clipping + image-blocking)
-- Web-safe font stack: `'Courier New', Courier, monospace` for body; `Impact, 'Arial Black', sans-serif` for display headline so it renders without webfonts
-- Hazard accent and tape strip done with inline `background-color` + border tricks
-- Dark-mode meta hint included; colors chosen to survive Gmail/Outlook dark inversion
-- Subject line suggestion provided in a comment at top of file
+Pure markdown, no frontmatter. Code fences for snippets. Tables for color/type tokens. ~400–600 lines, dense but scannable. Self-contained — another agent should need nothing else.
 
 ## Out of scope
 
-- No Lovable Cloud `auth-email-hook` wiring
-- No project file changes
-- No other auth templates (recovery, magic link, invite) — can add later if you want
+- Logo files / image assets (none exist as standalone files)
+- Project source edits
+- Translating to other formats (Figma, JSON design tokens) — markdown only
